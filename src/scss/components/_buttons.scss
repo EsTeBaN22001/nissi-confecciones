@@ -1,0 +1,18 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.button-orange-inline-widthAuto{
+  @include m.button(v.$orange, v.$white, inline-block, auto);
+}
+
+.button-orange-block-width90{
+  @include m.button(v.$orange, v.$white, block, 90%);
+}
+
+.button-darkGray-inline-widthAuto{
+  @include m.button(v.$darkGray, v.$white, inline-block, auto);
+}
+
+.button-darkGray-block-width90{
+  @include m.button(v.$darkGray, v.$white, block, 90%);
+}

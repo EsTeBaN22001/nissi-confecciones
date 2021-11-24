@@ -1,0 +1,21 @@
+@use 'variables' as v;
+
+h1, h2, h3 {
+    font-family: v.$principal_font;
+    margin: 0 0 calc(v.$separation / 2) 0 ;
+    font-weight: v.$boldPlus;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2.6rem;
+}
+h3 {
+    font-size: 2rem;
+}
+p {
+    font-size: 1.5rem;
+}
