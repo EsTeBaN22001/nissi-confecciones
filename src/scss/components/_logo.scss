@@ -1,0 +1,15 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.logo{
+  font-size: 6rem;
+  // text-transform: uppercase;
+  font-family: v.$logo_font;
+  font-weight: v.$ligther;
+  color: v.$white;
+  transition: color .7s ease;
+
+  span{
+    font-weight: v.$boldPlus;
+  }
+}

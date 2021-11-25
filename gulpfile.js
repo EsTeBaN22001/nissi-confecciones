@@ -30,7 +30,6 @@ function css() {
         .pipe( dest('public/build/css') );
 }
 
-
 function javascript() {
     return src(paths.js)
       .pipe(terser())
@@ -56,9 +55,8 @@ function versionWebp() {
 function watchArchivos() {
     watch( paths.scss, css );
     watch( paths.js, javascript );
-    watch( paths.imagenes, imagenes );
     watch( paths.imagenes, versionWebp );
 }
 
 exports.watch = watchArchivos;
-exports.default = parallel(css, javascript,  imagenes, versionWebp,  watchArchivos ); 
+exports.default = parallel(css, javascript, versionWebp,  watchArchivos ); 

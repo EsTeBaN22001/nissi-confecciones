@@ -1,0 +1,1 @@
+const $=t=>document.querySelector(t);if($(".header")){const t=$(".header");window.addEventListener("scroll",(function(){t.classList.toggle("down",window.scrollY>0)}));const e=$(".menu-icon"),n=$(".navbar");e.addEventListener("click",(function(){n.classList.toggle("active"),e.classList.toggle("buttonActive")}))}

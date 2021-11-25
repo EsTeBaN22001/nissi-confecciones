@@ -1,0 +1,51 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include m.tablet{
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    background-color: v.$black;
+    transition: all .3s ease;
+  }
+
+  .navbar-link{
+    position: relative;
+    color: v.$white;
+    letter-spacing: .2rem;
+    font-weight: v.$bold;
+    transition: all .3s ease;
+    padding: 2rem 1.5rem;
+    border-bottom: .3rem solid transparent;
+
+    &:hover{
+      background-color: rgba($color: #ffffff, $alpha: .5);
+      border-bottom: .3rem solid v.$white;
+    }
+
+  }
+
+}
+
+@include m.tablet{
+  // Clases para mostrar u ocultar el navbar
+  .active{
+    transform: translate(+100%);
+  }
+
+  .buttonActive{
+    z-index: 99;
+    // color: v.$black;
+    transition: color .3s ease;
+  }
+
+  
+}

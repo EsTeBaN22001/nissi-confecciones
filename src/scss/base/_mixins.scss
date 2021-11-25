@@ -17,6 +17,13 @@
     }
 }
 
+@mixin breakpointDesktop {
+    @media (max-width: v.$breakpointDesktop) {
+        @content;
+    }
+}
+
+
 
 @mixin button($bgColor, $textColor, $display, $width) {
     background-color: $bgColor;
