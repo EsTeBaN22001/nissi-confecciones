@@ -31,15 +31,27 @@
   <div class="typeJobs-container container">
     <h2>Tipos de trabajo</h2>
     <p>Estos son los distintos tipos de trabajos que se pueden llegar a realizar. Pero ante una duda consulte a la empresa.</p>
-    <div class="jobs-container">
+    <div class="jobs-container section">
       <div class="job">
-
+        <div class="img-container">
+          <img src="build/img/woodJob.webp" alt="Imagen de trabajos en madera">
+          <h3>Grabados en madera</h3>
+          <p>Este estilo consiste en hacer grabados sobre madera</p>
+        </div>
       </div>
       <div class="job">
-
+        <div class="img-container">
+          <img src="build/img/metalJob.webp" alt="Imagen de trabajos en metal">
+          <h3>Grabados en metal</h3>
+          <p>Este estilo consiste en hacer grabados sobre metal</p>
+        </div>
       </div>
       <div class="job">
-
+        <div class="img-container">
+          <img src="build/img/silverJob.webp" alt="Imagen de trabajos en plata">
+          <h3>Grabados en plata</h3>
+          <p>Este estilo consiste en hacer grabados sobre plata</p>
+        </div>
       </div>
     </div>
   </div>

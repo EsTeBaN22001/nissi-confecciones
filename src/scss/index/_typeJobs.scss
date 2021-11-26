@@ -1,0 +1,48 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.typeJobs{
+  background-color: v.$black;
+  color: v.$lightGray;
+
+  .typeJobs-container{
+    p{
+      text-align: center;
+      max-width: 70%;
+      margin: 0 auto;
+    }
+
+    .jobs-container{
+      @include m.grid(3, 3rem);
+
+      @include m.tablet{
+        @include m.grid(1, 3rem);
+      }
+
+      .job{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        -webkit-box-shadow: 0px 0px 10px -6px rgba(255,255,255,1);
+        -moz-box-shadow: 0px 0px 10px -6px rgba(255,255,255,1);
+        box-shadow: 0px 0px 10px -6px rgba(255,255,255,1);
+        border-radius: 1rem;
+
+        img{
+          width: 15rem;
+          height: 15rem;
+          border-radius: 50%;
+        }
+
+        h3{
+          margin: 1rem 0 2rem 0;
+          font-weight: v.$bold;
+          color: v.$white;
+        }
+      }
+    }
+  }
+}
