@@ -1,0 +1,39 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.about{
+  .about-container{
+    @include m.grid(2, 1rem);
+    text-align: justify;
+
+    @include m.tablet{
+      grid-template-columns: 1fr;
+    }
+
+    .about-info{
+      padding: 1rem;
+
+      h3{
+        text-align: start;
+        margin-top: 3rem;
+      }
+
+      h2{
+        text-align: start;
+        font-weight: v.$ligther;
+      }
+
+      ul{
+        padding-left: 1.8rem;
+        li{
+          list-style: disc;
+        }
+      }
+    }
+    .about-image{
+      img{
+        border-radius: 1rem;
+      }
+    }
+  }
+}

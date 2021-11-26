@@ -1,12 +1,15 @@
 // Fuentes
 $principal_font: 'Poppins', sans-serif;
 $logo_font: 'Dancing Script', cursive;
+$titles_font: 'Roboto', sans-serif;
 
 // Breackpoints para los media queries
 $phone: 480px;
 $tablet: 768px;
 $desktop: 1024px;
 $breakpointDesktop: 930px;
+$breakpointPhone: 410px;
+$breakpointSmartWatch: 280px;
 
 // Colors
 $black: #1a1b15;
@@ -16,6 +19,7 @@ $white: #FFFFFF;
 $orange: #FF6D24;
 $darkGray: #4E413B;
 $gray: #857671;
+$red: #f32020;
 
 
 $separation: 5rem;

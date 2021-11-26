@@ -19,15 +19,18 @@
 
   .navbar-link{
     position: relative;
+    width: 50%;
     color: v.$white;
+    text-align: center;
     letter-spacing: .2rem;
     font-weight: v.$bold;
     transition: all .3s ease;
     padding: 2rem 1.5rem;
     border-bottom: .3rem solid transparent;
+    z-index: 99;
 
     &:hover{
-      background-color: rgba($color: #ffffff, $alpha: .5);
+      background-color: rgba($color: v.$white, $alpha: .5);
       border-bottom: .3rem solid v.$white;
     }
 

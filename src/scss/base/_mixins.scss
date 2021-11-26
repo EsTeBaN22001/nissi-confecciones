@@ -23,6 +23,18 @@
     }
 }
 
+@mixin breakpointPhone {
+    @media (max-width: v.$breakpointPhone) {
+        @content;
+    }
+}
+
+@mixin breakpointSmartWatch {
+    @media (max-width: v.$breakpointSmartWatch) {
+        @content;
+    }
+}
+
 
 
 @mixin button($bgColor, $textColor, $display, $width) {
