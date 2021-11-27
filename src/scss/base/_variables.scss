@@ -1,7 +1,11 @@
+// Import de la fuente de las cards
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
+
 // Fuentes
 $principal_font: 'Poppins', sans-serif;
 $logo_font: 'Dancing Script', cursive;
 $titles_font: 'Roboto', sans-serif;
+$cards_font: "Source Sans Pro", sans-serif;// font stuff
 
 // Breackpoints para los media queries
 $phone: 480px;
@@ -21,6 +25,14 @@ $darkGray: #4E413B;
 $gray: #857671;
 $lightGray: #bfbfbf;
 $red: #f32020;
+
+// Color from cards
+$lightBG: #dce1df;
+$salmon: #ff6666;
+$teal: #0096a0;
+$tealMid: #0ebac7;
+$tealContrast: #33ffff;
+$tealShade: #007c85;
 
 
 $separation: 5rem;
