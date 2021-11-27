@@ -32,6 +32,57 @@
 
 	<?php echo $contenido; ?>
 
+	<footer class="footer">
+		<div class="footer-container container">
+			<div class="contact">
+				<h3 class="titleSeparator">Enlaces de contacto</h3>
+				<div class="contact-group">
+					<a href="">
+						<i class="fas fa-map-marker-alt"></i>
+						<p>Dirección</p>
+					</a>
+				</div>
+				<div class="contact-group">
+					<a href="">
+						<i class="fas fa-phone-square-alt"></i>
+						<p>Teléfono</p>
+					</a>
+				</div>
+				<div class="contact-group">
+					<a href="">
+						<i class="fas fa-envelope"></i>
+						<p>Email</p>
+					</a>
+				</div>
+				<div class="contact-group">
+					<a href="">
+						<i class="fab fa-instagram"></i>
+						<p>Instagram</p>
+					</a>
+				</div>
+				<div class="contact-group">
+					<a href="">
+						<i class="fab fa-facebook-square"></i>
+						<p>Facebook</p>
+					</a>
+				</div>
+			</div>
+			<div class="other-pages">
+				<h3 class="titleSeparator">Otras páginas</h3>
+				<ul>
+					<li><a href="/">Inicio</a></li>
+					<li><a href="/products">Productos</a></li>
+					<li><a href="/about-us">Sobre nosotros</a></li>
+					<li><a href="/galery">Galería</a></li>
+					<li><a href="/contact-us">Contáctanos</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="copyright">
+			<p>&copy; Todos los derechos reservados por Carlos Guerra web 2021</p>
+		</div>
+	</footer>
+
 	<!-- Font Awesome -->
 	<script src="build/js/fontawesome.min.js"></script>
 	<!-- Principal scipt -->

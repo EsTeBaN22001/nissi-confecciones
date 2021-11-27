@@ -9,7 +9,7 @@
 <section class="about section">
   <div class="about-container container">
     <div class="about-info">
-      <h2>Acerca de nosotros</h2>
+      <h2 class="titleSeparator">Acerca de nosotros</h2>
       <p>Nosotros lo que buscamos es hacer los productos de mayor calidad y al mejor precio. Contamos con una máquina de gran calidad para lograr hacer los mejores grabados con mayor calidad y en distintos materiales.</p>
       <h3>Nuestros objetivos</h3>
       <ul class="about-list">
@@ -29,7 +29,7 @@
 
 <section class="typeJobs section">
   <div class="typeJobs-container container">
-    <h2>Tipos de trabajo</h2>
+    <h2 class="titleSeparator">Tipos de trabajo</h2>
     <p>Estos son los distintos tipos de trabajos que se pueden llegar a realizar. Pero ante una duda consulte a la empresa.</p>
     <div class="jobs-container section">
       <div class="job">
@@ -58,7 +58,7 @@
 </section>
 
 <div class="cards section container">
-  <h2>Últimos productos</h2>
+  <h2 class="titleSeparator">Últimos productos</h2>
 
   <div class="cards-container">
     <div class="card">
@@ -66,7 +66,7 @@
         <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
       </div>
       <div class="card-title">
-        <h2>
+        <h2 class="titleSeparator">
             Título del producto
             <small>Subtítulo del producto</small>
         </h2>
@@ -88,7 +88,7 @@
         <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
       </div>
       <div class="card-title">
-        <h2>
+        <h2 class="titleSeparator">
             Título del producto
             <small>Subtítulo del producto</small>
         </h2>
@@ -110,7 +110,7 @@
         <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
       </div>
       <div class="card-title">
-        <h2>
+        <h2 class="titleSeparator">
             Título del producto
             <small>Subtítulo del producto</small>
         </h2>
@@ -132,7 +132,7 @@
         <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
       </div>
       <div class="card-title">
-        <h2>
+        <h2 class="titleSeparator">
             Título del producto
             <small>Subtítulo del producto</small>
         </h2>
@@ -154,7 +154,7 @@
         <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
       </div>
       <div class="card-title">
-        <h2>
+        <h2 class="titleSeparator">
             Título del producto
             <small>Subtítulo del producto</small>
         </h2>
@@ -176,7 +176,7 @@
         <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
       </div>
       <div class="card-title">
-        <h2>
+        <h2 class="titleSeparator">
             Título del producto
             <small>Subtítulo del producto</small>
         </h2>

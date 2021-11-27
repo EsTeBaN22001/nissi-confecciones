@@ -1,0 +1,94 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer{
+  background-color: v.$black;
+  color: v.$lightGray;
+  
+  .footer-container{
+    padding: 3rem;
+    @include m.grid(2, 20rem);
+
+    @include m.tablet{
+      @include m.grid(1, 4rem);
+    }
+
+    h3{
+      color: v.$white;
+      text-align: start;
+      font-size: 3rem;
+
+      &.titleSeparator{
+        &::after {
+          margin: 1rem 0;
+        }
+      }
+    }
+
+    .contact{
+      .contact-group{
+        a{
+          width: auto;
+          display: flex;
+          align-items: center;
+          color: v.$white;
+          transition: all .3s ease;
+          
+          p{
+            font-size: 1.7rem;
+            margin: .7rem;
+          }
+  
+          i{
+            margin-right: 1rem;
+            font-size: 2.4rem;
+            transition: all .3s ease;
+          }
+
+          &:hover{
+            color: v.$orange;
+
+            i{
+              color: v.$orange;
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+    }
+
+    .other-pages{
+      ul{
+        li{
+          list-style: disc;
+          transition: color .3s ease;
+
+          a{
+            color: v.$white;
+            transition: color .3s ease;
+          }
+          
+          &:hover{
+            color: v.$orange;
+
+            a{
+              color: v.$orange;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .copyright{
+    text-align: center;
+    background-color: #000000;
+    width: 100%;
+    padding: 2rem 0;
+    color: v.$white;
+    
+    p{
+      font-size: 1.8rem;
+    }
+  }
+}

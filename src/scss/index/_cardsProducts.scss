@@ -2,7 +2,7 @@
 @use 'base/mixins' as m;
 
 a.btn {
-  background: v.$teal;
+  background: v.$orange;
   border-radius: 4px;
   color: v.$white;
   display: inline-block;
@@ -12,7 +12,7 @@ a.btn {
   transition: all .3s 0s ease-out;
 
   &:hover{
-    background: darken(v.$teal, 10);
+    background: darken(v.$orange, 10);
     transform: scale(1.1);
   }
 }

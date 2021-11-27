@@ -4,6 +4,7 @@ html {
     font-size: 62.5%;
     box-sizing: border-box;
     height: 100%;
+    line-height: normal;
 }
 body {
     min-height: 100%;
@@ -35,4 +36,17 @@ li{
 
 .section{
     padding: 2.5rem 0;
+}
+
+.titleSeparator{
+    &::after {
+        content: "";
+        height: .3rem;
+        width: 90%;
+        display: block;
+        background-color: v.$orange;
+        margin-top: .7rem;
+        margin: 1rem auto;
+        border-radius: 2rem;
+      }
 }
