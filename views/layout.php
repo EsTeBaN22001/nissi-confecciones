@@ -23,10 +23,10 @@
 			<i class="fas fa-bars"></i>
 		</div>
 		<nav class="navbar active">
-				<a href="#" class="navbar-link">Productos</a>
-				<a href="#" class="navbar-link">Nosotros</a>
-				<a href="#" class="navbar-link">Galeria</a>
-				<a href="#" class="navbar-link">Contáctanos</a>
+				<a href="/products" class="navbar-link">Productos</a>
+				<a href="/about-us" class="navbar-link">Nosotros</a>
+				<a href="/galery" class="navbar-link">Galeria</a>
+				<a href="/contact-us" class="navbar-link">Contáctanos</a>
 		</nav>
 	</header>
 

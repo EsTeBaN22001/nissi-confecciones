@@ -43,13 +43,6 @@
     height: 60vh;
   }
 
-  @include m.phone{
-    height: 40vh;
-  }
-
-  @include m.breakpointSmartWatch{
-    height: 50vh;
-  }
 
   // Oscurecer imagen
   &::before {

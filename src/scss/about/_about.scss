@@ -1,0 +1,27 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.about{
+  &.about-page{
+    .about-container{
+      
+      .about-image{
+        grid-column: 1 / 2;
+
+        @include m.tablet{
+          grid-row: 2 / 3;
+        }
+      }
+      .about-info{
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        padding-top: 0;
+
+        @include m.tablet{
+          grid-column: 1 / 2;
+          grid-row: 1 / 2;
+        }
+      }
+    }
+  }
+}

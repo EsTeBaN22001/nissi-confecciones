@@ -1,0 +1,83 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contact-forms{
+  background-color: v.$black;
+  color: v.$lightGray;
+
+  .contact-forms-container{
+    h2{
+      color: v.$white;
+    }
+  
+    .social-networks{
+      padding: 4rem 0;
+
+      ul{
+        @include m.grid(4, 0rem);
+        padding: 0;
+        transition: all .3s ease;
+        text-align: center;
+
+        @include m.tablet{
+          @include m.grid(2, 4rem);
+        }
+
+        &:hover a{
+          filter: blur(.2rem);
+        }
+
+        li{
+    
+          a{
+            color: v.$lightGray;
+            display: flex;
+            flex-direction: column;
+            font-size: 10rem;
+            transition: all .3s ease;
+
+            &:hover{
+              filter: none;
+              transform: translateY(-.3rem) scale(1.05);
+            }
+
+            i{
+              transition: all .5s ease;
+            }
+          }
+
+          p{
+            margin: 0;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.whatsapp:hover{
+  i{
+    color: v.$whatsapp;
+  }
+}
+
+.email:hover{
+  i{
+    color: v.$email;
+  }
+}
+
+.instagram:hover{
+  i{
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+.facebook:hover{
+  i{ 
+    color: v.$facebook;
+  }
+}
