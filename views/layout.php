@@ -14,6 +14,12 @@
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="FontAwesome/all.css">
 	<link rel="stylesheet" href="FontAwesome/all.min.css">
+
+	<?php isset($_SERVER['PATH_INFO']) ? $pathInfo = $_SERVER['PATH_INFO'] : $pathInfo = ''; ?>
+
+	<?php if($pathInfo == "/galery"): ?>
+		<?php endif; ?>
+		<link rel="stylesheet" href="build/css/lightbox.css">
 </head>
 <body>
 
@@ -87,5 +93,10 @@
 	<script src="build/js/fontawesome.min.js"></script>
 	<!-- Principal scipt -->
 	<script src="build/js/app.js"></script>
-</body>
+
+	<?php if( $pathInfo == "/galery"): ?>
+		<!-- LightBox -->
+		<?php endif; ?>
+			<script src="build/js/lightbox-plus-jquery.min.js"></script>
+	</body>
 </html>

@@ -1,4 +1,4 @@
-<section class="hero">
+<section class="hero hero-home">
   <div class="hero-content container">
     <h3 class="welcome">Bienvenido(a) a</h3>
     <h1><a href="/" class="logo"><span>Carlos-</span>Guerra</a></h1>
@@ -63,7 +63,7 @@
   <div class="cards-container">
     <div class="card">
       <div class="card__image-holder">
-        <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
+        <img class="card__image" src="https://images.unsplash.com/photo-1549625935-e40596ba38fb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=225&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F2ZXx8fHx8fDE2MzgyOTU5MzQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="wave" />
       </div>
       <div class="card-title">
         <h2 class="titleSeparator">
@@ -85,7 +85,7 @@
 
     <div class="card">
       <div class="card__image-holder">
-        <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
+        <img class="card__image" src="https://images.unsplash.com/photo-1549625935-e40596ba38fb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=225&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F2ZXx8fHx8fDE2MzgyOTU5MzQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="wave" />
       </div>
       <div class="card-title">
         <h2 class="titleSeparator">
@@ -107,7 +107,7 @@
 
     <div class="card">
       <div class="card__image-holder">
-        <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
+        <img class="card__image" src="https://images.unsplash.com/photo-1549625935-e40596ba38fb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=225&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F2ZXx8fHx8fDE2MzgyOTU5MzQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="wave" />
       </div>
       <div class="card-title">
         <h2 class="titleSeparator">
@@ -129,7 +129,7 @@
 
     <div class="card">
       <div class="card__image-holder">
-        <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
+        <img class="card__image" src="https://images.unsplash.com/photo-1549625935-e40596ba38fb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=225&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F2ZXx8fHx8fDE2MzgyOTU5MzQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="wave" />
       </div>
       <div class="card-title">
         <h2 class="titleSeparator">
@@ -151,7 +151,7 @@
 
     <div class="card">
       <div class="card__image-holder">
-        <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
+        <img class="card__image" src="https://images.unsplash.com/photo-1549625935-e40596ba38fb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=225&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F2ZXx8fHx8fDE2MzgyOTU5MzQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="wave" />
       </div>
       <div class="card-title">
         <h2 class="titleSeparator">
@@ -173,7 +173,7 @@
 
     <div class="card">
       <div class="card__image-holder">
-        <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
+        <img class="card__image" src="https://images.unsplash.com/photo-1549625935-e40596ba38fb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=225&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F2ZXx8fHx8fDE2MzgyOTU5MzQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="wave" />
       </div>
       <div class="card-title">
         <h2 class="titleSeparator">

@@ -1,0 +1,58 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.galery-container{
+  .titleSeparator{
+    &::after{
+      width: 100%;
+    }
+  }
+}
+
+.images-container{
+  margin-top: 3rem;
+  @include m.grid(4, 1rem);
+  grid-auto-flow: dense;
+
+  @include m.tablet{
+    @include m.grid(2, 1rem);
+  }
+
+  @include m.phone{
+    @include m.grid(1, 1rem);
+  }
+
+  a{
+    grid-column : span 1;
+  }
+
+  .spanX2{
+    grid-column: span 2;
+  }
+  .spanY2{
+    grid-row: span 2;
+  }
+
+  .spanXY2{
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  @include m.phone{
+    .spanX2{
+      grid-column: span 1;
+    }
+    .spanY2{
+      grid-row: span 1;
+    }
+    .spanXY2{
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+  }
+
+  img{
+    object-fit: cover;
+    height: 100%;
+  }
+}

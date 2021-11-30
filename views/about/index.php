@@ -1,7 +1,7 @@
 <section class="hero">
   <div class="hero-content container">
     <h3 class="welcome">Sobre nosotros</h3>
-    <h1><a href="/" class="logo"><span>Carlos-</span>Guerra</a></h1>
+    <h2><a href="/" class="logo"><span>Carlos-</span>Guerra</a></h2>
     <p>Conoce un poco más de quienes somos.</p>
   </div>
 </section>
@@ -9,7 +9,7 @@
 <section class="about about-page section">
   <div class="about-container container">
     <div class="about-info">
-      <h2 class="titleSeparator">Acerca de nosotros</h2>
+      <h1 class="titleSeparator">Acerca de nosotros</h1>
       <p>Nosotros lo que buscamos es hacer los productos de mayor calidad y al mejor precio. Contamos con una máquina de gran calidad para lograr hacer los mejores grabados con mayor calidad y en distintos materiales.</p>
       <h3>Nuestros objetivos</h3>
       <ul class="about-list">
@@ -33,9 +33,9 @@
     <div class="social-networks">
       <ul>
         <li><a href="#" class="whatsapp"><i class="fab fa-whatsapp-square"></i></a><p>WhatsApp</p></li>
-        <li><a href="#" class="email"><i class="fas fa-envelope-square"></i></a><p>Email</p></li>
-        <li><a href="#" class="instagram"><i class="fab fa-instagram-square"></i></a><p>Instagram</p></li>
-        <li><a href="#" class="facebook"><i class="fab fa-facebook-square"></i></a>Facebook</li>
+        <li><a href="/contact-us" class="email"><i class="fas fa-envelope-square"></i></a><p>Email</p></li>
+        <li><a href="https://www.instagram.com/carlos.guespa/" target="__blank" class="instagram"><i class="fab fa-instagram-square"></i></a><p>Instagram</p></li>
+        <li><a href="https://www.facebook.com/carlosdavid.guerraespans.1" target="__blank" class="facebook"><i class="fab fa-facebook-square"></i></a>Facebook</li>
       </ul>
     </div>
   </div>
