@@ -8,7 +8,7 @@ class ActiveRecord {
     protected static $columnasDB = [];
 
     // Alertas y Mensajes
-    protected static $alertas = [];
+    protected static $alerts = [];
     
     // Definir la conexión a la BD - includes/database.php
     public static function setDB($database) {
@@ -16,17 +16,17 @@ class ActiveRecord {
     }
 
     public static function setAlerta($tipo, $mensaje) {
-        static::$alertas[$tipo][] = $mensaje;
+        static::$alerts[$tipo][] = $mensaje;
     }
 
     // Validación
     public static function getAlertas() {
-        return static::$alertas;
+        return static::$alerts;
     }
 
     public function validar() {
-        static::$alertas = [];
-        return static::$alertas;
+        static::$alerts = [];
+        return static::$alerts;
     }
 
     // Consulta SQL para crear un objeto en Memoria
@@ -114,6 +114,13 @@ class ActiveRecord {
         $query = "SELECT * FROM " . static::$tabla  ." WHERE id = ${id}";
         $resultado = self::consultarSQL($query);
         return array_shift( $resultado ) ;
+    }
+
+    // Busca un registro por su columna y su valor
+    public static function where($column, $value) {
+        $query = "SELECT * FROM " . static::$tabla  ." WHERE ${column} = '${value}'";
+        $result = self::consultarSQL($query);
+        return array_shift( $result ) ;
     }
 
     // Obtener Registros con cierta cantidad

@@ -61,4 +61,18 @@ class Router
         $contenido = ob_get_clean(); // Limpia el Buffer
         include_once __DIR__ . '/views/layout.php';
     }
+
+    public function renderAdmin($view, $datos = [])
+    {
+
+        foreach ($datos as $key => $value){
+            $$key = $value;
+        }
+
+        ob_start();
+
+        include_once __DIR__ . "/views/$view.php";
+        $contenido = ob_get_clean();
+        include_once __DIR__ . '/views/layoutAdmin.php';
+    }
 }

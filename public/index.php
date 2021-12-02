@@ -2,7 +2,9 @@
 
 require_once __DIR__ . '/../includes/app.php';
 
+use Controllers\AdminController;
 use Controllers\IndexController;
+use Controllers\LoginController;
 use MVC\Router;
 
 $router = new Router();
@@ -18,6 +20,17 @@ $router->get('/galery', [IndexController::class, 'galery']);
 
 // Página contact-us
 $router->get('/contact-us', [IndexController::class, 'contactUs']);
+$router->post('/contact-us', [IndexController::class, 'contactUs']);
+
+// Login para administradores
+$router->get('/login', [LoginController::class, 'login']);
+$router->post('/login', [LoginController::class, 'login']);
+
+// Sección de administradores
+$router->get('/admin', [AdminController::class, 'index']);
+$router->get('/admin/list-admins', [AdminController::class, 'listAdmins']);
+$router->get('/admin/create-admin', [AdminController::class, 'createAdmin']);
+$router->post('/admin/create-admin', [AdminController::class, 'createAdmin']);
 
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
