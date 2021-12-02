@@ -5,7 +5,7 @@ namespace Model;
 class Admin extends ActiveRecord{
   // Base de datos
   protected static $tabla = 'users';
-  protected static $columnsDB = ['id', 'name', 'surname', 'email', 'password'];
+  protected static $columnsDB = ['id', 'name', 'surname', 'email', 'password', 'level'];
 
   public $id;
   public $name;
@@ -20,7 +20,7 @@ class Admin extends ActiveRecord{
     $this->surname = $args['surname'] ?? '';
     $this->email = $args['email'] ?? '';
     $this->password = $args['password'] ?? '';
-    $this->level = $args['level'] ?? '';
+    $this->level = $args['level'] ?? 1;
   }
 
   // Validar el inicio de sesión de un usuario
@@ -55,6 +55,9 @@ class Admin extends ActiveRecord{
     }
     if(strlen($this->password) > 20){
       self::$alerts['error'][] = 'La contraseña puede tener máximo 20 caracteres';
+    }
+    if(!$this->level){
+      self::$alerts['error'][] = 'Elije el nivel de administrador';
     }
     return self::$alerts;
   }
@@ -105,6 +108,33 @@ class Admin extends ActiveRecord{
     }else{
       return true;
     }
+  }
+
+  // crea un nuevo registro
+  public function crearAdmin() {
+
+    // Insertar en la base de datos
+    $query = "INSERT INTO users (name, surname, email, password, level) VALUES ('$this->name', '$this->surname', '$this->email', '$this->password', '$this->level')";
+
+    // Resultado de la consulta
+    $resultado = self::$db->query($query);
+    return [
+        'resultado' =>  $resultado,
+        'id' => self::$db->insert_id
+    ];  
+  }
+
+  public function authenticate(){
+    // session_start();
+    session_unset();
+    $_SESSION = [];
+
+    // Llenar el arrreglo de sesión
+    $_SESSION['name'] = $this->name;
+    $_SESSION['surname'] = $this->surname;
+    $_SESSION['email'] = $this->email;
+    $_SESSION['level'] = $this->level;
+    $_SESSION['login'] = true;
   }
 
 }

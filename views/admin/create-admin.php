@@ -17,36 +17,37 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-          <form>
+            <?php include_once __DIR__ . './../templates/alerts.php'; ?>
+          <form class="form" action="/admin/create-admin" method="POST">
             <div class="card-body">
               <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                <label for="name">Nombre:</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Escribe tu nombre" value="<?= s($admin->name); ?>">
               </div>
               <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                <label for="surname">Apellido:</label>
+                <input type="text" class="form-control" id="surname" name="surname" placeholder="Escribe tu apellido" value="<?= s($admin->surname); ?>">
               </div>
               <div class="form-group">
-                <label for="exampleInputFile">File input</label>
-                <div class="input-group">
-                  <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="exampleInputFile">
-                    <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                  </div>
-                  <div class="input-group-append">
-                    <span class="input-group-text">Upload</span>
-                  </div>
-                </div>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Escribe tu correo electrónico" value="<?= s($admin->email); ?>">
               </div>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Escribe tu contraseña">
+              </div>
+              <div class="form-group">
+                <label for="level">Nivel de administrador:</label>
+                <select name="level" id="level" class="form-control">
+                  <option selected disabled>--Seleccione--</option>
+                  <option value="1">Nivel 1</option>
+                  <option value="2">Nivel 2</option>
+                </select>
               </div>
             </div>
 
             <div class="card-footer">
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">Crear</button>
             </div>
           </form>
           </div>

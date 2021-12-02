@@ -133,7 +133,7 @@ class ActiveRecord {
     // crea un nuevo registro
     public function crear() {
         // Sanitizar los datos
-        $atributos = $this->sanitizarAtributos();
+        $atributos = $this->atributos();
 
         // Insertar en la base de datos
         $query = " INSERT INTO " . static::$tabla . " ( ";

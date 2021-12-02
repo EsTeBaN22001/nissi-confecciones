@@ -1,3 +1,4 @@
+<?php debuguear($_SESSION); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +14,7 @@
   <link rel="stylesheet" href="/build/admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="/build/admin/css/adminlte.min.css">
+  
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
@@ -53,7 +55,7 @@
     <!-- Brand Logo -->
     <a href="/admin" class="brand-link">
       <img src="/build/admin/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light">Carlos Guerra Web</span>
     </a>
 
     <!-- Sidebar -->
@@ -61,7 +63,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="info">
-          <a href="#" class="d-block"><?= $_SESSION['name']; ?></a>
+          <a href="#" class="d-block"><?= $_SESSION['name'] . " " . $_SESSION['surname']; ?></a>
         </div>
       </div>
 
@@ -213,7 +215,7 @@ if($_SERVER['PATH_INFO'] == '/admin/list-admins'): ?>
 
 <?php if($_SERVER['PATH_INFO'] == '/admin/list-admins'): ?>
   <!-- bs-custom-file-input -->
-  <script src="../../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+  <script src="/build/admin/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
   <!-- Page specific script -->
   <script>
     $(function () {

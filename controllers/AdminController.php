@@ -23,11 +23,48 @@ class AdminController extends ActiveRecord{
 
   public static function createAdmin(Router $router){
 
+    $admin = new Admin();
+    $alerts = [];
+
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
+      $admin->sincronizar($_POST);
+      $alerts = $admin->validateNewAccount();
+
+      if(empty($alerts)){
+
+        // Verificar si el usuario existe
+        $userExists = $admin->userExists();
+        
+        if($userExists->num_rows){
+          $alerts = Admin::getAlertas();
+        }else{
+
+          $admin->hashPassword();
+
+          // Crear el usuario
+          $result = $admin->crearAdmin();
+
+          if($result){
+
+            $admin->authenticate();
+            
+            $admin::setAlerta('success', 'El administrador se creó correctamente');
+            
+          }
+
+        }
+
+      }
+
     }
+
+    $alerts = Admin::getAlertas();
     
-    $router->renderAdmin('admin/create-admin');
+    $router->renderAdmin('admin/create-admin', [
+      'admin' => $admin,
+      'alerts' => $alerts
+    ]);
   }
 }
 
