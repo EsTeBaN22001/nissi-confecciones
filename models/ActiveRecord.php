@@ -33,7 +33,7 @@ class ActiveRecord {
     public static function consultarSQL($query) {
         // Consultar la base de datos
         $resultado = self::$db->query($query);
-
+        
         // Iterar los resultados
         $array = [];
         while($registro = $resultado->fetch_assoc()) {
@@ -42,7 +42,7 @@ class ActiveRecord {
 
         // liberar la memoria
         $resultado->free();
-
+        
         // retornar los resultados
         return $array;
     }
@@ -165,7 +165,8 @@ class ActiveRecord {
         $query = "UPDATE " . static::$tabla ." SET ";
         $query .=  join(', ', $valores );
         $query .= " WHERE id = '" . self::$db->escape_string($this->id) . "' ";
-        $query .= " LIMIT 1 "; 
+        $query .= " LIMIT 1 ";
+        debuguear($query);
 
         // Actualizar BD
         $resultado = self::$db->query($query);

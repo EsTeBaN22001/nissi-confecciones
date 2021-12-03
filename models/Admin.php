@@ -36,8 +36,8 @@ class Admin extends ActiveRecord{
     return self::$alerts;
   }
 
-  // Validar el email para recuperar contraseña
-  public function validateNewAccount(){
+  // Validar nueva cuenta de administrador
+  public function validateAccount(){
     if(!$this->name){
       self::$alerts['error'][] = 'El nombre es obligatorio';
     }
@@ -61,6 +61,7 @@ class Admin extends ActiveRecord{
     }
     return self::$alerts;
   }
+
 
   // Revisa si el usuario existe
   public function userExists(){
@@ -89,7 +90,7 @@ class Admin extends ActiveRecord{
   }
 
   // Hashea la contraseña
-  public function hasHPassword(){
+  public function hashPassword(){
     $this->password = password_hash($this->password, PASSWORD_BCRYPT);
   }
 
@@ -122,6 +123,16 @@ class Admin extends ActiveRecord{
         'resultado' =>  $resultado,
         'id' => self::$db->insert_id
     ];  
+  }
+
+  // Edita y actualiza un registro de administrador
+  public function updateAdmin(){
+    $query = "UPDATE users set name = '$this->name', surname = '$this->surname', email = '$this->email', password = '$this->password', level = $this->level WHERE id = $this->id LIMIT 1";
+
+    $resultado = self::$db->query($query);
+    return [
+      'resultado' =>  $resultado
+  ];
   }
 
   public function authenticate(){

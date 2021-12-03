@@ -13,15 +13,15 @@ function s($html) : string {
 	return $s;
 }
 
-// Valida si hay un id o sino redirecciona
-function validarORedireccionar(string $url){
-	// Validación y sanitización de la URL por Id válido
+function validateORedirect($url){
+
 	$id = $_GET['id'];
 	$id = filter_var($id, FILTER_VALIDATE_INT);
 
 	if(!$id){
-		header("location: ${url}");
+		header("Location: ${url}");
 	}
 
 	return $id;
+
 }

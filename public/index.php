@@ -28,9 +28,14 @@ $router->post('/login', [LoginController::class, 'login']);
 
 // Sección de administradores
 $router->get('/admin', [AdminController::class, 'index']);
+
 $router->get('/admin/list-admins', [AdminController::class, 'listAdmins']);
+
 $router->get('/admin/create-admin', [AdminController::class, 'createAdmin']);
 $router->post('/admin/create-admin', [AdminController::class, 'createAdmin']);
+
+$router->get('/admin/edit-admin', [AdminController::class, 'editAdmin']);
+$router->post('/admin/edit-admin', [AdminController::class, 'editAdmin']);
 
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador

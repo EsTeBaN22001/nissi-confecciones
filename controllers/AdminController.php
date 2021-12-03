@@ -29,7 +29,7 @@ class AdminController extends ActiveRecord{
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
       $admin->sincronizar($_POST);
-      $alerts = $admin->validateNewAccount();
+      $alerts = $admin->validateAccount();
 
       if(empty($alerts)){
 
@@ -66,6 +66,45 @@ class AdminController extends ActiveRecord{
       'alerts' => $alerts
     ]);
   }
+
+  public static function editAdmin(Router $router){
+
+    	// Validación y sanitización de la URL por Id válido
+    $id = validateORedirect('/admin');
+    
+    $admin = Admin::find($id);
+
+    $alerts = [];
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+      $admin->sincronizar($_POST);
+      $alerts = $admin->validateAccount();
+
+      if(empty($alerts)){
+
+        $admin->hashPassword();
+
+        $result = $admin->updateAdmin();
+
+        if($result){
+          header('Location: /admin/list-admins');
+        }
+
+        
+
+      }
+
+    }
+
+
+    $router->renderAdmin('admin/edit-admin', [
+      'admin' => $admin,
+      'alerts' => $alerts
+    ]);
+  }
+
+
 }
 
 ?>

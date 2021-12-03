@@ -39,8 +39,8 @@
                         <td><?= $admin->email; ?></td>
                         <td><?= $admin->level; ?></td>
                         <td>
-                          <a href="edit-admin.php?id=<?= $admin->id; ?>" class="btn bg-blue"><i class="fas fa-edit"></i></a>
-                          <a href="#" data-id="<?= $admin->id; ?>" data-type="admin" class="btn  bg-red"><i class="fa fa-trash"></i></a>
+                          <a href="/admin/edit-admin?id=<?= $admin->id; ?>" class="btn bg-blue"><i class="fas fa-edit"></i></a>
+                          <a href="/admin/delete-admin?id=<?= $admin->id; ?>" class="btn  bg-red"><i class="fa fa-trash"></i></a>
                         </td>
                       </tr>
                     <?php endforeach; ?>
