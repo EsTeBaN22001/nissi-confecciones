@@ -132,8 +132,15 @@ class Admin extends ActiveRecord{
     $resultado = self::$db->query($query);
     return [
       'resultado' =>  $resultado
-  ];
+    ];
   }
+
+  // Eliminar un Registro por su ID
+  // public function deleteAdmin() {
+  //   $query = "DELETE FROM users WHERE id = " . $this->id . " LIMIT 1";
+  //   $resultado = self::$db->query($query);
+  //   return $resultado;
+  // }
 
   public function authenticate(){
     // session_start();

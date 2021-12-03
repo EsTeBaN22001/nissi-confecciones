@@ -104,7 +104,24 @@ class AdminController extends ActiveRecord{
     ]);
   }
 
+  public static function deleteAdmin(Router $router){
+    
 
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+      
+      $id = $_POST['id'];
+      $id = filter_var($id, FILTER_VALIDATE_INT);
+
+      $admin = Admin::find($id);
+      $result = $admin->eliminar();
+
+      if($result){
+        header('Location: /admin/list-admins');
+      }
+
+    }
+
+  }
 }
 
 ?>

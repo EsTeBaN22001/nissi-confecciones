@@ -39,8 +39,11 @@
                         <td><?= $admin->email; ?></td>
                         <td><?= $admin->level; ?></td>
                         <td>
-                          <a href="/admin/edit-admin?id=<?= $admin->id; ?>" class="btn bg-blue"><i class="fas fa-edit"></i></a>
-                          <a href="/admin/delete-admin?id=<?= $admin->id; ?>" class="btn  bg-red"><i class="fa fa-trash"></i></a>
+                          <a href="/admin/edit-admin?id=<?= $admin->id; ?>" class="btn bg-blue">Editar</a>
+                          <form method="POST" class="w-100" action="/admin/delete-admin">
+                            <input type="hidden" name="id" value="<?php echo $admin->id; ?>">
+                            <input type="submit" class="btn bg-red" value="Eliminar">
+                          </form>
                         </td>
                       </tr>
                     <?php endforeach; ?>

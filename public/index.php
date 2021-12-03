@@ -37,6 +37,9 @@ $router->post('/admin/create-admin', [AdminController::class, 'createAdmin']);
 $router->get('/admin/edit-admin', [AdminController::class, 'editAdmin']);
 $router->post('/admin/edit-admin', [AdminController::class, 'editAdmin']);
 
+$router->get('/admin/delete-admin', [AdminController::class, 'deleteAdmin']);
+$router->post('/admin/delete-admin', [AdminController::class, 'deleteAdmin']);
+
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->comprobarRutas();
