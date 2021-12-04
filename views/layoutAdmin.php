@@ -178,8 +178,10 @@
 
 <?php 
 
+$pathListAdmin = $_SERVER['PATH_INFO'] == '/admin/list-admins';
+$pathListProduct = $_SERVER['PATH_INFO'] == '/admin/list-products';
 
-if($_SERVER['PATH_INFO'] == '/admin/list-admins'): ?>
+if($pathListAdmin || $pathListProduct): ?>
 
   <!-- DataTables  & Plugins -->
   <script src="/build/admin/plugins/datatables/jquery.dataTables.min.js"></script>
@@ -201,8 +203,8 @@ if($_SERVER['PATH_INFO'] == '/admin/list-admins'): ?>
       $('#example2').DataTable({
         "paging": true,
         "lengthChange": false,
-        "searching": false,
-        "ordering": true,
+        "searching": true,
+        "ordering": false,
         "info": true,
         "autoWidth": false,
         "responsive": true,

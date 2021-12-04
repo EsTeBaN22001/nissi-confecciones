@@ -1,5 +1,7 @@
 <?php
 
+define('PRODUCT_IMAGES_FOLDER', $_SERVER['DOCUMENT_ROOT'] . "/productsImages/");
+
 function debuguear($variable) : string {
 	echo "<pre>";
 	var_dump($variable);

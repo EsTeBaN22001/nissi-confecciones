@@ -166,7 +166,6 @@ class ActiveRecord {
         $query .=  join(', ', $valores );
         $query .= " WHERE id = '" . self::$db->escape_string($this->id) . "' ";
         $query .= " LIMIT 1 ";
-        debuguear($query);
 
         // Actualizar BD
         $resultado = self::$db->query($query);
@@ -178,6 +177,30 @@ class ActiveRecord {
         $query = "DELETE FROM "  . static::$tabla . " WHERE id = " . self::$db->escape_string($this->id) . " LIMIT 1";
         $resultado = self::$db->query($query);
         return $resultado;
+    }
+
+    // Subida de archivos
+    public function setImage($image){
+        // Elimina la imagen previa
+        $this->deleteImage();
+
+        // Asignar al atributo de imagen el nombre de la imagen
+        if($image){
+            $this->image = $image;
+        }
+    }
+
+    // Eliminar imagen
+    public function deleteImage(){
+        if(!is_null($this->id)){
+            // Comprobar si existe el archivo
+            $fileExist= file_exists(PRODUCT_IMAGES_FOLDER . $this->image);
+
+            if($fileExist){
+                unlink(PRODUCT_IMAGES_FOLDER . $this->image);
+            }
+            $fileExist = null;
+        }
     }
 
 }

@@ -5,6 +5,7 @@ require_once __DIR__ . '/../includes/app.php';
 use Controllers\AdminController;
 use Controllers\IndexController;
 use Controllers\LoginController;
+use Controllers\ProductsController;
 use MVC\Router;
 
 $router = new Router();
@@ -29,16 +30,27 @@ $router->post('/login', [LoginController::class, 'login']);
 // Sección de administradores
 $router->get('/admin', [AdminController::class, 'index']);
 
+// Listar administradores
 $router->get('/admin/list-admins', [AdminController::class, 'listAdmins']);
 
+// Crear administradores
 $router->get('/admin/create-admin', [AdminController::class, 'createAdmin']);
 $router->post('/admin/create-admin', [AdminController::class, 'createAdmin']);
 
+// Editar administradores
 $router->get('/admin/edit-admin', [AdminController::class, 'editAdmin']);
 $router->post('/admin/edit-admin', [AdminController::class, 'editAdmin']);
 
+// Eliminar administradores
 $router->get('/admin/delete-admin', [AdminController::class, 'deleteAdmin']);
 $router->post('/admin/delete-admin', [AdminController::class, 'deleteAdmin']);
+
+// Listar productos
+$router->get('/admin/list-products', [ProductsController::class, 'listProducts']);
+
+// Crear productos
+$router->get('/admin/create-product', [ProductsController::class, 'createProduct']);
+$router->post('/admin/create-product', [ProductsController::class, 'createProduct']);
 
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador

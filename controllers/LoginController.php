@@ -30,9 +30,8 @@ class LoginController{
               session_unset();
             }
 
-            $_SESSION['id'] = $user->id;
-            $_SESSION['email'] = $user->email;
-            $_SESSION['login'] = true;
+            // Almacenar la información del usuario en la variable de session
+            $user->authenticate();
 
           }
 
@@ -45,7 +44,8 @@ class LoginController{
     $alerts = Admin::getalertas();
     
     $router->render('login/index', [
-      'alerts' => $alerts
+      'alerts' => $alerts,
+      'session' => $_SESSION
     ]);
 
   }

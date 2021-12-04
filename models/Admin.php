@@ -104,7 +104,7 @@ class Admin extends ActiveRecord{
     
     $result = password_verify($password, $this->password);
     
-    if(!$result || !$this->confirmed){
+    if(!$result){
       self::$alerts['error'][] = 'Contraseña incorrecta';
     }else{
       return true;
@@ -135,17 +135,7 @@ class Admin extends ActiveRecord{
     ];
   }
 
-  // Eliminar un Registro por su ID
-  // public function deleteAdmin() {
-  //   $query = "DELETE FROM users WHERE id = " . $this->id . " LIMIT 1";
-  //   $resultado = self::$db->query($query);
-  //   return $resultado;
-  // }
-
   public function authenticate(){
-    // session_start();
-    session_unset();
-    $_SESSION = [];
 
     // Llenar el arrreglo de sesión
     $_SESSION['name'] = $this->name;
@@ -153,6 +143,7 @@ class Admin extends ActiveRecord{
     $_SESSION['email'] = $this->email;
     $_SESSION['level'] = $this->level;
     $_SESSION['login'] = true;
+    
   }
 
 }

@@ -4,6 +4,7 @@ namespace Controllers;
 
 use Model\ActiveRecord;
 use Model\Admin;
+use Model\Product;
 use MVC\Router;
 
 class AdminController extends ActiveRecord{
@@ -104,7 +105,7 @@ class AdminController extends ActiveRecord{
     ]);
   }
 
-  public static function deleteAdmin(Router $router){
+  public static function deleteAdmin(){
     
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -122,6 +123,7 @@ class AdminController extends ActiveRecord{
     }
 
   }
+
 }
 
 ?>
