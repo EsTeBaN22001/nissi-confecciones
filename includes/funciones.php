@@ -1,6 +1,7 @@
 <?php
 
 define('PRODUCT_IMAGES_FOLDER', $_SERVER['DOCUMENT_ROOT'] . "/productsImages/");
+define('GALERY_IMAGES_FORLDER', $_SERVER['DOCUMENT_ROOT'] . "/galeryImages/");
 
 function debuguear($variable) : string {
 	echo "<pre>";

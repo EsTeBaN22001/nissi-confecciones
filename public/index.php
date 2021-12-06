@@ -3,6 +3,7 @@
 require_once __DIR__ . '/../includes/app.php';
 
 use Controllers\AdminController;
+use Controllers\GaleryController;
 use Controllers\IndexController;
 use Controllers\LoginController;
 use Controllers\ProductsController;
@@ -59,6 +60,15 @@ $router->post('/admin/edit-product', [ProductsController::class, 'editProduct'])
 // Eliminar productos
 $router->get('/admin/delete-product', [ProductsController::class, 'deleteProduct']);
 $router->post('/admin/delete-product', [ProductsController::class, 'deleteProduct']);
+
+// Galería de imágenes
+
+// Listar las imágenes
+$router->get('/admin/list-images', [GaleryController::class, 'listImages']);
+
+// Crear imágenes
+$router->get('/admin/create-image', [GaleryController::class, 'createImage']);
+$router->post('/admin/create-image', [GaleryController::class, 'createImage']);
 
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador

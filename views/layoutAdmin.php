@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -129,13 +129,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/admin/list-photos" class="nav-link">
+                <a href="/admin/list-images" class="nav-link">
                   <i class="fas fa-list"></i>
                   <p>Ver todas</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/admin/create-photo" class="nav-link">
+                <a href="/admin/create-image" class="nav-link">
                   <i class="fas fa-plus-circle"></i>
                   <p>Añadir imágenes</p>
                 </a>
@@ -180,8 +180,9 @@
 
 $pathListAdmin = $_SERVER['PATH_INFO'] == '/admin/list-admins';
 $pathListProduct = $_SERVER['PATH_INFO'] == '/admin/list-products';
+$pathListProduct = $_SERVER['PATH_INFO'] == '/admin/list-images';
 
-if($pathListAdmin || $pathListProduct): ?>
+if($pathListAdmin || $pathListProduct || $pathListGalery): ?>
 
   <!-- DataTables  & Plugins -->
   <script src="/build/admin/plugins/datatables/jquery.dataTables.min.js"></script>
