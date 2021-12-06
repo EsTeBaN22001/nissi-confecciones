@@ -7,6 +7,11 @@
     <label for="image">Imagen:</label>
     <input type="file" class="form-control" id="image" accept="image/*" name="image">
   </div>
+  <?php if($product->image): ?>
+    <div class="form-group">
+      <img src="/productsImages/<?= $product->image; ?>" alt="Imagen del producto" class="productImage">
+    </div>
+  <?php endif; ?>
   <div class="form-group">
     <label for="description">Descripción:</label>
     <input type="text" class="form-control" id="description" name="description" placeholder="Escribe una descripción" value="<?= s($product->description); ?>">

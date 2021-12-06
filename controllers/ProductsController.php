@@ -67,6 +67,8 @@ class ProductsController extends ActiveRecord{
 
 				if($result){
 					$product::setAlerta('success', 'El producto se creó correctamente');
+				}else{
+					$product::setAlerta('error', 'Hubo un error al guardar el producto');
 				}
 			}
 
@@ -80,6 +82,58 @@ class ProductsController extends ActiveRecord{
 			'alerts' => $alerts
 		]);
 		
+	}
+
+	public static function editProduct(Router $router){
+
+		// Validación y sanitización de la URL por Id válido
+		$id = validateORedirect('/admin');
+
+		$product = Product::find($id);
+
+		$admins = Admin::all();
+
+		$alerts = [];
+
+		if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+			$product->sincronizar($_POST);
+			$alerts = $product->validateProduct();
+
+			// Subida de archivos
+			// Generar nombre único para las imágenes
+			$nameImage = md5(uniqid(rand(), true)). ".jpg";
+			
+			if($_FILES['image']['tmp_name']){
+				$image = Image::make($_FILES['image']['tmp_name'])->fit(800, 600);
+				$product->setImage($nameImage);
+			}
+
+			// Validación
+			$alerts = $product->validateProduct();
+
+			// Revisar que el arreglo de errores este vacio
+			if(empty($alerts)){
+				// Almacenar la imagen
+				if ($_FILES['image']['tmp_name']){
+					$image->save(PRODUCT_IMAGES_FOLDER . $nameImage);
+				}
+				$result = $product->updateProduct();
+				if($result){
+					$product::setAlerta('success', 'Se actualizó correctamente le producto');
+				}
+			}
+
+		}
+
+		$alerts = $product::getAlertas();
+
+		$router->renderAdmin('admin/products/edit-product', [
+			'product' => $product,
+			'admins' => $admins,
+			'alerts' => $alerts
+		]);
+
 	}
 
 }

@@ -52,6 +52,10 @@ $router->get('/admin/list-products', [ProductsController::class, 'listProducts']
 $router->get('/admin/create-product', [ProductsController::class, 'createProduct']);
 $router->post('/admin/create-product', [ProductsController::class, 'createProduct']);
 
+// Actualizar productos
+$router->get('/admin/edit-product', [ProductsController::class, 'editProduct']);
+$router->post('/admin/edit-product', [ProductsController::class, 'editProduct']);
+
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->comprobarRutas();

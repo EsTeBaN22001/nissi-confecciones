@@ -181,8 +181,12 @@ class ActiveRecord {
 
     // Subida de archivos
     public function setImage($image){
-        // Elimina la imagen previa
-        $this->deleteImage();
+
+        if($this->image){
+            // Elimina la imagen previa
+            $this->deleteImage();
+        }
+        
 
         // Asignar al atributo de imagen el nombre de la imagen
         if($image){

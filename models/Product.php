@@ -56,6 +56,16 @@ class Product extends ActiveRecord{
 
   }
 
+    // Edita y actualiza un registro de administrador
+    public function updateProduct(){
+      $query = "UPDATE products set title = '$this->title', image = '$this->image', description = '$this->description', price = '$this->price', createdBy = $this->createdBy WHERE id = $this->id LIMIT 1";
+  
+      $result = self::$db->query($query);
+      return [
+        'result' =>  $result
+      ];
+    }
+
 }
 
 ?>
