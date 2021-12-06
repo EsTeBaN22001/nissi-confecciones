@@ -136,6 +136,22 @@ class ProductsController extends ActiveRecord{
 
 	}
 
+	public static function deleteProduct(){
+
+		$id = $_POST['id'];
+		$id = filter_var($id, FILTER_VALIDATE_INT);
+
+		if($_SERVER['REQUEST_METHOD'] = 'POST'){
+			$product = Product::find($id);
+			$product->deleteImage();
+			$result = $product->eliminar();
+			if($result){
+				header('Location: /admin/list-products');
+			}
+		}
+
+	}
+
 }
 
 ?>
