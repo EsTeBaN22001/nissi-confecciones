@@ -75,7 +75,8 @@ $router->get('/admin/edit-image', [GaleryController::class, 'editImage']);
 $router->post('/admin/edit-image', [GaleryController::class, 'editImage']);
 
 // Eliminar imágen
-
+$router->get('/admin/delete-image', [GaleryController::class, 'delImage']);
+$router->post('/admin/delete-image', [GaleryController::class, 'delImage']);
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->comprobarRutas();

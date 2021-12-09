@@ -137,6 +137,22 @@ class GaleryController extends ActiveRecord{
     
   }
 
+  public static function delImage(){
+    
+		$id = $_POST['id'];
+		$id = filter_var($id, FILTER_VALIDATE_INT);
+
+		if($_SERVER['REQUEST_METHOD'] = 'POST'){
+			$image = Galery::find($id);
+			$image->deleteImage(GALERY_IMAGES_FORLDER);
+			$result = $image->eliminar();
+			if($result){
+				header('Location: /admin/list-images');
+			}
+		}
+
+  }
+
 }
 
 ?>
