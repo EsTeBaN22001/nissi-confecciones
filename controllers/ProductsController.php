@@ -15,6 +15,14 @@ class ProductsController extends ActiveRecord{
 		// Obtiene todas los productos
 		$product = new Product();
 		$products = $product::all();
+		
+		foreach($products as $product){
+			
+			$idAdmin = $product->createdBy;
+			$result = Admin::find($idAdmin);
+			$product->createdBy = $result->name . " " . $result->surname;
+
+		}
 
 		$router->renderAdmin('admin/products/list-products', [
 			'products' => $products

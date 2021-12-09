@@ -14,6 +14,16 @@ class GaleryController extends ActiveRecord{
 
     // Obtener todas las imágenes
     $images = Galery::all();
+		
+    // Reemplazar el id del creador(Admin) por el nombre y apellido
+    // Ej: $idAdmin = 1 === $resultName = Esteban Redón
+		foreach($images as $image){
+			
+			$idImage = $image->createdBy;
+			$result = Admin::find($idImage);
+			$image->createdBy = $result->name . " " . $result->surname;
+
+		}
 
     $router->renderAdmin('admin/galery/list-images', [
       'images' => $images
