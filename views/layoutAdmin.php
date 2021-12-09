@@ -180,7 +180,7 @@
 
 $pathListAdmin = $_SERVER['PATH_INFO'] == '/admin/list-admins';
 $pathListProduct = $_SERVER['PATH_INFO'] == '/admin/list-products';
-$pathListProduct = $_SERVER['PATH_INFO'] == '/admin/list-images';
+$pathListGalery = $_SERVER['PATH_INFO'] == '/admin/list-images';
 
 if($pathListAdmin || $pathListProduct || $pathListGalery): ?>
 

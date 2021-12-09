@@ -26,6 +26,7 @@
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
+                    <th>Id</th>
                     <th>Nombre y apellido</th>
                     <th>email</th>
                     <th>Nivel</th>
@@ -35,6 +36,7 @@
                   <tbody>
                     <?php foreach($admins as $admin): ?>
                       <tr>
+                        <td><?= $admin->id; ?></td>
                         <td><?= $admin->name . " " . $admin->surname; ?></td>
                         <td><?= $admin->email; ?></td>
                         <td><?= $admin->level; ?></td>
@@ -50,6 +52,7 @@
                   </tbody>
                   <tfoot>
                   <tr>
+                  <th>Id</th>
                     <th>Nombre y apellido</th>
                     <th>email</th>
                     <th>Nivel</th>

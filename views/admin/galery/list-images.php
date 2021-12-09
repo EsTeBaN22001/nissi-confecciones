@@ -42,7 +42,7 @@
                         <td><?= $image->createdBy; ?></td>
                         <td>
                           <a href="/admin/edit-image?id=<?= $image->id; ?>" class="btn bg-blue">Editar</a>
-                          <form method="POST" class="w-100" action="/admin/delete-product">
+                          <form method="POST" class="w-100" action="/admin/delete-image">
                             <input type="hidden" name="id" value="<?php echo $image->id; ?>">
                             <input type="submit" class="btn bg-red" value="Eliminar">
                           </form>

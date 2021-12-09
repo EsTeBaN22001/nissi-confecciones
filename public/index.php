@@ -70,6 +70,12 @@ $router->get('/admin/list-images', [GaleryController::class, 'listImages']);
 $router->get('/admin/create-image', [GaleryController::class, 'createImage']);
 $router->post('/admin/create-image', [GaleryController::class, 'createImage']);
 
+// Editar imágenes
+$router->get('/admin/edit-image', [GaleryController::class, 'editImage']);
+$router->post('/admin/edit-image', [GaleryController::class, 'editImage']);
+
+// Eliminar imágen
+
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->comprobarRutas();

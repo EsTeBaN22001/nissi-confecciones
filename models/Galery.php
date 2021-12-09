@@ -10,6 +10,7 @@ class Galery extends ActiveRecord{
   public $id;
   public $title;
   public $image;
+  public $createdBy;
 
   public function __construct($args = []){
     $this->id = $args['id'] ?? null;
@@ -35,11 +36,23 @@ class Galery extends ActiveRecord{
     $query = "INSERT INTO galery (title, image, createdBy) VALUES ('$this->title', '$this->image', $this->createdBy)";
 
     $result = self::$db->query($query);
-    
+
     return [
         'result' =>  $result,
         'id' => self::$db->insert_id
     ]; 
+
+  }
+
+  public function updateImage(){
+
+    $query = "UPDATE galery SET title = '$this->title', image = '$this->image', createdBy = $this->createdBy WHERE id = $this->id LIMIT 1";
+
+    $result = self::$db->query($query);
+
+    return [
+      'result' =>  $result
+    ];
 
   }
 }

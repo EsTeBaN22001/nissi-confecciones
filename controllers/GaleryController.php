@@ -28,6 +28,9 @@ class GaleryController extends ActiveRecord{
 
     $admins = Admin::all();
 
+    // Crea un array con las alertas
+    $alerts = [];
+
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
       
       $image->sincronizar($_POST);
@@ -42,7 +45,7 @@ class GaleryController extends ActiveRecord{
 			// Realiza un resize a la imagen con intervention
 			if($_FILES['image']['tmp_name']){
 				$img = Image::make($_FILES['image']['tmp_name'])->fit(800, 600);
-				$image->setImage($nameImage);
+				$image->setImage($nameImage, GALERY_IMAGES_FORLDER);
 			}
 
       if(empty($alerts)){
@@ -77,6 +80,61 @@ class GaleryController extends ActiveRecord{
       'alerts' => $alerts
     ]);
 
+  }
+
+  public static function editImage(Router $router){
+
+    // Validación y sanitización de la URL por Id válido
+    $id = validateORedirect('/admin');
+
+    // Busca la imagen por su id
+    $image = Galery::find($id);
+
+    // Obtiene todos los administradores
+    $admins = Admin::all();
+
+    // Crea un array con las alertas
+    $alerts = [];
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+      $image->sincronizar($_POST);
+      $alerts = $image->validateGalery();
+      
+      // Subida de archivos
+			// Generar nombre único para las imágenes
+			$nameImage = md5(uniqid(rand(), true)). ".jpg";
+			
+			if($_FILES['image']['tmp_name']){
+				$img = Image::make($_FILES['image']['tmp_name'])->fit(800, 600);
+				$image->setImage($nameImage, GALERY_IMAGES_FORLDER);
+			}
+
+      if(empty($alerts)){
+        // Almacenar la imagen
+				if ($_FILES['image']['tmp_name']){
+					$img->save(GALERY_IMAGES_FORLDER . $nameImage);
+				}
+        
+				$result = $image->updateImage();
+
+				if($result){
+					$image::setAlerta('success', 'Se actualizó correctamente la imagen');
+				}else{
+					$image::setAlerta('error', 'Hubo un problema al actualizar la imagen');
+        }
+      }
+
+    }
+
+    $alerts = Galery::getAlertas();
+
+    $router->renderAdmin('admin/galery/edit-image', [
+      'image' => $image,
+      'admins' => $admins,
+      'alerts' => $alerts
+    ]);
+    
   }
 
 }

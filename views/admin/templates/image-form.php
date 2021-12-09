@@ -19,6 +19,6 @@
 </div>
 
 <div class="card-footer">
-  <input type="hidden" name="id" value="<?= $product->id ?? null; ?>">
+  <input type="hidden" name="id" value="<?= $image->id ?? null; ?>">
   <button type="submit" class="btn btn-primary">Guardar</button>
 </div>

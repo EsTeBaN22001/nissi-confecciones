@@ -180,31 +180,29 @@ class ActiveRecord {
     }
 
     // Subida de archivos
-    public function setImage($image){
+    public function setImage($img, $dir){
 
         if($this->image){
             // Elimina la imagen previa
-            $this->deleteImage();
+            $this->deleteImage($dir);
         }
         
 
         // Asignar al atributo de imagen el nombre de la imagen
-        if($image){
-            $this->image = $image;
+        if($img){
+            $this->image = $img;
         }
     }
 
     // Eliminar imagen
-    public function deleteImage(){
-        if(!is_null($this->id)){
-            // Comprobar si existe el archivo
-            $fileExist= file_exists(PRODUCT_IMAGES_FOLDER . $this->image);
+    public function deleteImage($dir){
+        // Comprobar si existe el archivo
+        $fileExist= file_exists($dir . $this->image);
 
-            if($fileExist){
-                unlink(PRODUCT_IMAGES_FOLDER . $this->image);
-            }
-            $fileExist = null;
+        if($fileExist){
+            unlink($dir . $this->image);
         }
+        $fileExist = null;
     }
 
 }

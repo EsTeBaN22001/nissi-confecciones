@@ -46,7 +46,7 @@ class ProductsController extends ActiveRecord{
 			// Realiza un resize a la imagen con intervention
 			if($_FILES['image']['tmp_name']){
 				$image = Image::make($_FILES['image']['tmp_name'])->fit(800, 600);
-				$product->setImage($nameImage);
+				$product->setImage($nameImage, PRODUCT_IMAGES_FOLDER);
 			}
 			
 
@@ -89,8 +89,10 @@ class ProductsController extends ActiveRecord{
 		// Validación y sanitización de la URL por Id válido
 		$id = validateORedirect('/admin');
 
+		// Buscar el producto por su id
 		$product = Product::find($id);
 
+		// Obtener todos los administradores
 		$admins = Admin::all();
 
 		$alerts = [];
@@ -106,7 +108,7 @@ class ProductsController extends ActiveRecord{
 			
 			if($_FILES['image']['tmp_name']){
 				$image = Image::make($_FILES['image']['tmp_name'])->fit(800, 600);
-				$product->setImage($nameImage);
+				$product->setImage($nameImage, PRODUCT_IMAGES_FOLDER);
 			}
 
 			// Validación
@@ -118,9 +120,11 @@ class ProductsController extends ActiveRecord{
 				if ($_FILES['image']['tmp_name']){
 					$image->save(PRODUCT_IMAGES_FOLDER . $nameImage);
 				}
+
 				$result = $product->updateProduct();
+				
 				if($result){
-					$product::setAlerta('success', 'Se actualizó correctamente le producto');
+					$product::setAlerta('success', 'Se actualizó correctamente el producto');
 				}
 			}
 
@@ -143,7 +147,7 @@ class ProductsController extends ActiveRecord{
 
 		if($_SERVER['REQUEST_METHOD'] = 'POST'){
 			$product = Product::find($id);
-			$product->deleteImage();
+			$product->deleteImage(PRODUCT_IMAGES_FOLDER);
 			$result = $product->eliminar();
 			if($result){
 				header('Location: /admin/list-products');
