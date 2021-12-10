@@ -32,7 +32,16 @@ class Category extends ActiveRecord{
     return [
       'result' =>  $result,
       'id' => self::$db->insert_id
-  ]; 
+    ]; 
+  }
+
+  public function updateCategory(){
+    $query = "UPDATE categories set category = '$this->category' WHERE id = $this->id LIMIT 1";
+
+    $resultado = self::$db->query($query);
+    return [
+      'resultado' =>  $resultado
+    ];
   }
 
 }

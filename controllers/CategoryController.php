@@ -40,14 +40,42 @@ class CategoryController extends ActiveRecord{
           $category::setAlerta('success', 'Se creó la categoría');
         }
         
-      }else{
-        $category::setAlerta('error', 'No se pudo crear la categoría');
       }
     }
 
-    $alerts = $category::getAlertas();
+    $alerts = Category::getAlertas();
 
     $router->renderAdmin('admin/products/categories/create-category', [
+      'category' => $category,
+      'alerts' => $alerts
+    ]);
+
+  }
+
+  public static function updateCategory(Router $router){
+
+    // Validación y sanitización de la URL por Id válido
+		$id = validateORedirect('/admin');
+
+		// Buscar el producto por su id
+		$category = Category::find($id);
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+      $category->sincronizar($_POST);
+
+      $category->validateCategory();
+
+      $result = $category->updateCategory();
+      
+      if($result){
+        $category::setAlerta('success', 'Se actualizó correctamente');
+      }
+    }
+
+    $alerts = Category::getAlertas();
+
+    $router->renderAdmin('admin/products/categories/edit-category', [
       'category' => $category,
       'alerts' => $alerts
     ]);

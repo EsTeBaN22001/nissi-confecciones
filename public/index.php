@@ -87,6 +87,10 @@ $router->get('/admin/products/list-categories', [CategoryController::class, 'lis
 $router->get('/admin/products/create-category', [CategoryController::class, 'createCategory']);
 $router->post('/admin/products/create-category', [CategoryController::class, 'createCategory']);
 
+// Actualizar categoría
+$router->get('/admin/products/edit-category', [CategoryController::class, 'updateCategory']);
+$router->post('/admin/products/edit-category', [CategoryController::class, 'updateCategory']);
+
 //////////////////////////////////////
 ////////Galería de imágenes//////////
 ////////////////////////////////////
