@@ -3,6 +3,7 @@
 require_once __DIR__ . '/../includes/app.php';
 
 use Controllers\AdminController;
+use Controllers\CategoryController;
 use Controllers\GaleryController;
 use Controllers\IndexController;
 use Controllers\LoginController;
@@ -39,6 +40,9 @@ $router->post('/login', [LoginController::class, 'login']);
 //////////////////////////////////////////////////////////////////////////////
 $router->get('/admin', [AdminController::class, 'index']);
 
+//////////////////////////////////////////
+///////Administradores del sitio/////////
+////////////////////////////////////////
 // Listar administradores
 $router->get('/admin/list-admins', [AdminController::class, 'listAdmins']);
 
@@ -54,6 +58,9 @@ $router->post('/admin/edit-admin', [AdminController::class, 'editAdmin']);
 $router->get('/admin/delete-admin', [AdminController::class, 'deleteAdmin']);
 $router->post('/admin/delete-admin', [AdminController::class, 'deleteAdmin']);
 
+////////////////////////////////////////
+//////////////Productos////////////////
+//////////////////////////////////////
 // Listar productos
 $router->get('/admin/list-products', [ProductsController::class, 'listProducts']);
 
@@ -69,8 +76,20 @@ $router->post('/admin/edit-product', [ProductsController::class, 'editProduct'])
 $router->get('/admin/delete-product', [ProductsController::class, 'deleteProduct']);
 $router->post('/admin/delete-product', [ProductsController::class, 'deleteProduct']);
 
-// Galería de imágenes
+//////////////////////////////////////
+/////////////Categorías//////////////
+////////////////////////////////////
 
+// Listar las categorías
+$router->get('/admin/products/list-categories', [CategoryController::class, 'listCategories']);
+
+// Crear categoría
+$router->get('/admin/products/create-category', [CategoryController::class, 'createCategory']);
+$router->post('/admin/products/create-category', [CategoryController::class, 'createCategory']);
+
+//////////////////////////////////////
+////////Galería de imágenes//////////
+////////////////////////////////////
 // Listar las imágenes
 $router->get('/admin/list-images', [GaleryController::class, 'listImages']);
 
@@ -86,5 +105,7 @@ $router->post('/admin/edit-image', [GaleryController::class, 'editImage']);
 $router->get('/admin/delete-image', [GaleryController::class, 'delImage']);
 $router->post('/admin/delete-image', [GaleryController::class, 'delImage']);
 
-// Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
+//////////////////////////////////////////////
+//////////////Comprobar rutas////////////////
+////////////////////////////////////////////
 $router->comprobarRutas();

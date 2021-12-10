@@ -131,13 +131,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/admin/products/list-categories" class="nav-link">
                       <i class="fas fa-list"></i>
                       <p>Ver todas</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/admin/products/create-category" class="nav-link">
                       <i class="fas fa-plus-circle"></i>
                       <p>Crear categoría</p>
                     </a>
@@ -166,6 +166,12 @@
                 <a href="/admin/create-image" class="nav-link">
                   <i class="fas fa-plus-circle"></i>
                   <p>Añadir imágenes</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/galery" class="nav-link">
+                  <i class="fas fa-camera"></i>
+                  <p>Ver galería</p>
                 </a>
               </li>
             </ul>

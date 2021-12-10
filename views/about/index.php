@@ -43,7 +43,7 @@
 
 <section class="send-message section">
   <div class="send-message-container container">
-    <h2 class="titleSeparator">¿Quieres mandarme un mensaje?</h2>
+    <h2 class="titleSeparator">¿Quieres enviarnos un mensaje?</h2>
     <p>Presiona aquí!</p>
     <a href="/contact-us" class="button-orange-inline-widthAuto">Enviar mensaje</a>
   </div>

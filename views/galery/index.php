@@ -11,48 +11,13 @@
     <h1 class="titleSeparator">Galería de imágenes</h1>
 
     <div class="images-container">
-      <a href="build/img/about-us-image.webp" data-lightbox="roadtrip">
-        <img src="build/img/about-us-image.webp" alt="" srcset="">
-      </a>
-      <a href="build/img/about.webp" data-lightbox="roadtrip">
-        <img src="build/img/about.webp" alt="" srcset="">
-      </a>
-      <a class="spanX2" href="build/img/banner.webp" data-lightbox="roadtrip">
-        <img src="build/img/banner.webp" alt="" srcset="">
-      </a>
-      <a class="spanX2" href="build/img/banner2.webp" data-lightbox="roadtrip">
-        <img src="build/img/banner2.webp" alt="" srcset="">
-      </a>
-      <a href="build/img/banner3.webp" data-lightbox="roadtrip">
-        <img src="build/img/banner3.webp" alt="" srcset="">
-      </a>
-      <a class="spanY2" href="build/img/about.webp" data-lightbox="roadtrip">
-        <img src="build/img/about.webp" alt="" srcset="">
-      </a>
-      <a href="build/img/banner.webp" data-lightbox="roadtrip">
-        <img src="build/img/banner.webp" alt="" srcset="">
-      </a>
-      <a href="build/img/banner2.webp" data-lightbox="roadtrip">
-        <img src="build/img/banner2.webp" alt="" srcset="">
-      </a>
-      <a href="build/img/banner3.webp" data-lightbox="roadtrip">
-        <img src="build/img/banner3.webp" alt="" srcset="">
-      </a>
-      <a class="spanXY2" href="build/img/banner.webp" data-lightbox="roadtrip">
-        <img src="build/img/banner.webp" alt="" srcset="">
-      </a>
-      <a href="build/img/banner2.webp" data-lightbox="roadtrip">
-        <img src="build/img/banner2.webp" alt="" srcset="">
-      </a>
-      <a href="build/img/banner3.webp" data-lightbox="roadtrip">
-        <img src="build/img/banner3.webp" alt="" srcset="">
-      </a>
-      <a href="build/img/banner.webp" data-lightbox="roadtrip">
-        <img src="build/img/banner.webp" alt="" srcset="">
-      </a>
-      <a href="build/img/banner2.webp" data-lightbox="roadtrip">
-        <img src="build/img/banner2.webp" alt="" srcset="">
-      </a>
+      <?php $i = 1; ?>
+      <?php foreach($images as $image): ?>
+        <?php $i == 3 || $i == 5 || $i = 7 || $i == 9 ? $span = 'spanY2' : $span = ''; ?>
+        <a class="<?= $span; ?>" href="/galeryImages/<?= $image->image; ?>" data-lightbox="roadtrip" data-title="<?= $image->title; ?>">
+          <img src="/galeryImages/<?= $image->image; ?>" alt="" srcset="">
+        </a>
+      <?php $i++; endforeach; ?>
     </div>
   </div>
 </section>

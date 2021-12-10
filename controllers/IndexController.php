@@ -2,6 +2,7 @@
 
 namespace Controllers;
 
+use Model\Galery;
 use Model\Product;
 use MVC\Router;
 
@@ -31,7 +32,12 @@ class IndexController{
   }
 
   public static function galery(Router $router){
-    $router->render('galery/index');
+
+    $images = Galery::all();
+    
+    $router->render('galery/index', [
+      'images' => $images
+    ]);
   }
 
   public static function contactUs(Router $router){

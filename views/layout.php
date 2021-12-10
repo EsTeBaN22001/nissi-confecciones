@@ -95,6 +95,17 @@
 	<?php if( $pathInfo == "/galery"): ?>
 		<!-- LightBox -->
 		<script src="build/js/lightbox-plus-jquery.min.js"></script>
+		<!-- Script de configuración -->
+		<script>
+    lightbox.option({
+      'resizeDuration': 400,
+      'wrapAround': true,
+			'imageFadeDuration': 400,
+			'fadeDuration': 400,
+			'disableScrolling': true,
+			'alwaysShowNavOnTouchDevices': true
+    })
+</script>
 	<?php endif; ?>
 		
 	<?php if( $pathInfo == "/products"): ?>
