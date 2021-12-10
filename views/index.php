@@ -61,71 +61,7 @@
   <h2 class="titleSeparator">Últimos productos</h2>
 
   <div class="cards-container">
-    <div class="card">
-      <div class="card__image-holder">
-        <img class="card__image" src="https://images.unsplash.com/photo-1549625935-e40596ba38fb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=225&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F2ZXx8fHx8fDE2MzgyOTU5MzQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="wave" />
-      </div>
-      <div class="card-title">
-        <h2 class="titleSeparator">
-            Título del producto
-            <small>Subtítulo del producto</small>
-        </h2>
-      </div>
-      <div class="card-flap flap1">
-        <div class="card-description">
-          This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
-        </div>
-        <div class="card-flap flap2">
-          <div class="card-actions">
-            <a href="#" class="btn">Ver producto</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card__image-holder">
-        <img class="card__image" src="https://images.unsplash.com/photo-1549625935-e40596ba38fb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=225&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F2ZXx8fHx8fDE2MzgyOTU5MzQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="wave" />
-      </div>
-      <div class="card-title">
-        <h2 class="titleSeparator">
-            Título del producto
-            <small>Subtítulo del producto</small>
-        </h2>
-      </div>
-      <div class="card-flap flap1">
-        <div class="card-description">
-          This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
-        </div>
-        <div class="card-flap flap2">
-          <div class="card-actions">
-            <a href="#" class="btn">Ver producto</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card__image-holder">
-        <img class="card__image" src="https://images.unsplash.com/photo-1549625935-e40596ba38fb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=225&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F2ZXx8fHx8fDE2MzgyOTU5MzQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="wave" />
-      </div>
-      <div class="card-title">
-        <h2 class="titleSeparator">
-            Título del producto
-            <small>Subtítulo del producto</small>
-        </h2>
-      </div>
-      <div class="card-flap flap1">
-        <div class="card-description">
-          This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
-        </div>
-        <div class="card-flap flap2">
-          <div class="card-actions">
-            <a href="#" class="btn">Ver producto</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <?php include_once('templates/products.php'); ?>
   </div>
 
 </div>

@@ -11,8 +11,14 @@ use MVC\Router;
 
 $router = new Router();
 
+////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////Páginas principales///////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
 // Página index
 $router->get('/', [IndexController::class, 'index']);
+
+// Página products
+$router->get('/products', [IndexController::class, 'products']);
 
 // Página about
 $router->get('/about-us', [IndexController::class, 'about']);
@@ -28,7 +34,9 @@ $router->post('/contact-us', [IndexController::class, 'contactUs']);
 $router->get('/login', [LoginController::class, 'login']);
 $router->post('/login', [LoginController::class, 'login']);
 
-// Sección de administradores
+////////////////////////////////////////////////////////////////////////////////
+//////////////////////Sección de administradores///////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
 $router->get('/admin', [AdminController::class, 'index']);
 
 // Listar administradores

@@ -18,8 +18,8 @@
 	<?php isset($_SERVER['PATH_INFO']) ? $pathInfo = $_SERVER['PATH_INFO'] : $pathInfo = ''; ?>
 
 	<?php if($pathInfo == "/galery"): ?>
-		<?php endif; ?>
 		<link rel="stylesheet" href="build/css/lightbox.css">
+	<?php endif; ?>
 </head>
 <body>
 
@@ -91,12 +91,17 @@
 
 	<!-- Font Awesome -->
 	<script src="build/js/fontawesome.min.js"></script>
-	<!-- Principal scipt -->
-	<script src="build/js/app.js"></script>
-
+	
 	<?php if( $pathInfo == "/galery"): ?>
 		<!-- LightBox -->
-		<?php endif; ?>
-			<script src="build/js/lightbox-plus-jquery.min.js"></script>
+		<script src="build/js/lightbox-plus-jquery.min.js"></script>
+	<?php endif; ?>
+		
+	<?php if( $pathInfo == "/products"): ?>
+		<script src="build/js/jquery.js"></script>
+	<?php endif; ?>
+		
+	<!-- Principal scipt -->
+	<script src="build/js/app.js"></script>
 	</body>
 </html>

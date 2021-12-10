@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Dashboard 2</title>
+  <title>Panel de administración | Carlos Guerra</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -45,6 +45,12 @@
           <i class="fas fa-th-large"></i>
         </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/" role="button">
+          <i class="fas fa-home"></i>
+          Volver al inicio
+        </a>
+      </li>
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -65,7 +71,6 @@
           <a href="#" class="d-block"><?= $_SESSION['name'] . " " . $_SESSION['surname']; ?></a>
         </div>
       </div>
-
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -115,6 +120,29 @@
                   <i class="fas fa-plus-circle"></i>
                   <p>Crear producto</p>
                 </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                <i class="fas fa-poll-h"></i>
+                  <p>
+                    Categorías
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="fas fa-list"></i>
+                      <p>Ver todas</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="fas fa-plus-circle"></i>
+                      <p>Crear categoría</p>
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </li>
@@ -178,11 +206,9 @@
 
 <?php 
 
-$pathListAdmin = $_SERVER['PATH_INFO'] == '/admin/list-admins';
-$pathListProduct = $_SERVER['PATH_INFO'] == '/admin/list-products';
-$pathListGalery = $_SERVER['PATH_INFO'] == '/admin/list-images';
+isset($_SERVER['PATH_INFO']) ? $pathInfo = $_SERVER['PATH_INFO'] : $pathInfo = '';
 
-if($pathListAdmin || $pathListProduct || $pathListGalery): ?>
+if($pathInfo == '/admin/list-admins' || $pathInfo == '/admin/list-products' || $pathInfo == '/admin/list-images'): ?>
 
   <!-- DataTables  & Plugins -->
   <script src="/build/admin/plugins/datatables/jquery.dataTables.min.js"></script>
@@ -203,19 +229,37 @@ if($pathListAdmin || $pathListProduct || $pathListGalery): ?>
       }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
       $('#example2').DataTable({
         "paging": true,
+        "pageLength": 5,
         "lengthChange": false,
         "searching": true,
         "ordering": false,
         "info": true,
         "autoWidth": false,
-        "responsive": true,
+        "responsive": false,
+        "scrollX": true,
+        "columnDefs": [
+          { "width": "10rem", "targets": 2 }
+        ],
+        "language": {
+          "emptyTable": "Tabla vacía",
+          "search": "Buscar:",
+          "info": "Mostrando _START_ a _END_ de _TOTAL_ resultados",
+          "zeroRecords": "No se encontraron registros que coincidieran con la búsqueda",
+          "infoFiltered": "(Filtrado de _MAX_ entradas totales)",
+          "paginate":{
+            "first": "Primero",
+            "last": "Último",
+            "next": "Siguiente",
+            "previous": "Anterior"
+          }
+        }
       });
     });
   </script>
 
 <?php endif; ?>
 
-<?php if($_SERVER['PATH_INFO'] == '/admin/list-admins'): ?>
+<?php if($pathInfo == '/admin/list-admins'): ?>
   <!-- bs-custom-file-input -->
   <script src="/build/admin/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
   <!-- Page specific script -->

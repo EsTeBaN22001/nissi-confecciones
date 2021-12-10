@@ -2,12 +2,28 @@
 
 namespace Controllers;
 
+use Model\Product;
 use MVC\Router;
 
 class IndexController{
 
   public static function index(Router $router){
-    $router->render('index');
+
+    $products = Product::get(3);
+
+    $router->render('index', [
+      'products' => $products
+    ]);
+  }
+
+  public static function products(Router $router){
+
+    $products = Product::all();
+    
+    $router->render('products/index', [
+      'products' => $products
+    ]);
+
   }
 
   public static function about(Router $router){
@@ -19,8 +35,6 @@ class IndexController{
   }
 
   public static function contactUs(Router $router){
-
-    
     
     $router->render('contact-us/index');
   }
