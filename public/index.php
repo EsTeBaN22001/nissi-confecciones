@@ -8,6 +8,7 @@ use Controllers\GaleryController;
 use Controllers\IndexController;
 use Controllers\LoginController;
 use Controllers\ProductsController;
+use Model\Category;
 use MVC\Router;
 
 $router = new Router();
@@ -90,6 +91,10 @@ $router->post('/admin/products/create-category', [CategoryController::class, 'cr
 // Actualizar categoría
 $router->get('/admin/products/edit-category', [CategoryController::class, 'updateCategory']);
 $router->post('/admin/products/edit-category', [CategoryController::class, 'updateCategory']);
+
+// Eliminar categoría
+$router->get('/admin/products/delete-category', [CategoryController::class, 'deleteCategory']);
+$router->post('/admin/products/delete-category', [CategoryController::class, 'deleteCategory']);
 
 //////////////////////////////////////
 ////////Galería de imágenes//////////

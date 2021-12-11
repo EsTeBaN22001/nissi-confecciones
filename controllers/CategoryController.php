@@ -82,6 +82,21 @@ class CategoryController extends ActiveRecord{
 
   }
 
+  public static function deleteCategory(){
+
+		$id = $_POST['id'];
+		$id = filter_var($id, FILTER_VALIDATE_INT);
+
+		if($_SERVER['REQUEST_METHOD'] == 'POST'){
+			$category = Category::find($id);
+			$result = $category->eliminar();
+			if($result){
+				header('Location: /admin/products/list-categories');
+			}
+		}
+
+	}
+
 }
 
 ?>
