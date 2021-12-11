@@ -7,6 +7,7 @@ use Model\Admin;
 use MVC\Router;
 use Model\Product;
 use Intervention\Image\ImageManagerStatic as Image;
+use Model\Category;
 
 class ProductsController extends ActiveRecord{
 
@@ -34,6 +35,9 @@ class ProductsController extends ActiveRecord{
 		// Obtiene todos los admins
 		$admin = new Admin();
 		$admins = $admin::all();
+
+		// Obtiene todas las categorías
+		$cateogories = Category::all();
 
 		// Crea una nueva instancia de un producto nuevo
 		$product = new Product();
@@ -87,6 +91,7 @@ class ProductsController extends ActiveRecord{
 		$router->renderAdmin('admin/products/create-product', [
 			'product' => $product,
 			'admins' => $admins,
+			'categories' => $cateogories,
 			'alerts' => $alerts
 		]);
 		
@@ -99,6 +104,9 @@ class ProductsController extends ActiveRecord{
 
 		// Buscar el producto por su id
 		$product = Product::find($id);
+
+		// Obtiene todas las categorías
+		$cateogories = Category::all();
 
 		// Obtener todos los administradores
 		$admins = Admin::all();
@@ -143,6 +151,7 @@ class ProductsController extends ActiveRecord{
 		$router->renderAdmin('admin/products/edit-product', [
 			'product' => $product,
 			'admins' => $admins,
+			'categories' => $cateogories,
 			'alerts' => $alerts
 		]);
 

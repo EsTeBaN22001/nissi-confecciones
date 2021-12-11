@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Lista de los administradores</h1>
+            <h1 class="m-0">Lista de los productos</h1>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -19,7 +19,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Lista de los administradores del sitio web</h3>
+                <h3 class="card-title">Lista de los productos del sitio web</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">

@@ -12,6 +12,15 @@
     <input type="text" class="form-control" id="description" name="description" placeholder="Escribe una descripción" value="<?= s($product->description); ?>">
   </div>
   <div class="form-group">
+    <label for="category">Categoría del producto:</label>
+    <select name="category" id="category" class="form-control">
+      <option selected disabled>--Seleccione--</option>
+      <?php foreach($categories as $category): ?>
+        <option value="<?= $category->id; ?>"><?= $category->category; ?></option>
+      <?php endforeach; ?>
+    </select>
+  </div>
+  <div class="form-group">
     <label for="price">Precio:</label>
     <input type="number" min="0" class="form-control" id="price" name="price" placeholder="Escribe el precio del producto" value="<?= s($product->price); ?>">
   </div>

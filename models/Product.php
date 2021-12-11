@@ -6,12 +6,13 @@ use Model\ActiveRecord;
 class Product extends ActiveRecord{
   // Base de datos
   protected static $tabla = 'products';
-  protected static $columnsDB = ['id', 'title', 'image', 'description', 'price', 'createdBy'];
+  protected static $columnsDB = ['id', 'title', 'image', 'description', 'category', 'price', 'createdBy'];
 
   public $id;
   public $image;
   public $title;
   public $description;
+  public $category;
   public $price;
   public $createdBy;
 
@@ -20,6 +21,7 @@ class Product extends ActiveRecord{
     $this->title = $args['title'] ?? '';
     $this->image = $args['image'] ?? '';
     $this->description = $args['description'] ?? '';
+    $this->category = $args['category'] ?? '';
     $this->price = $args['price'] ?? 0;
     $this->createdBy = $args['createdBy'] ?? '';
   }
@@ -35,6 +37,9 @@ class Product extends ActiveRecord{
     if(!$this->description){
       self::$alerts['error'][] = 'La descripción es obligatoria';
     }
+    if(!$this->category){
+      self::$alerts['error'][] = 'La categoría es obligatoria';
+    }
     if(!$this->price){
       self::$alerts['error'][] = 'El precio es obligatorio';
     }
@@ -46,7 +51,7 @@ class Product extends ActiveRecord{
 
   public function saveProduct(){
 
-    $query = "INSERT INTO products ( title, image, description, price, createdBy) VALUES ('$this->title', '$this->image', '$this->description', $this->price, $this->createdBy)";
+    $query = "INSERT INTO products ( title, image, description, category, price, createdBy) VALUES ('$this->title', '$this->image', '$this->description', $this->category, $this->price, $this->createdBy)";
 
     $result = self::$db->query($query);
     return [
@@ -58,7 +63,7 @@ class Product extends ActiveRecord{
 
     // Edita y actualiza un registro de administrador
     public function updateProduct(){
-      $query = "UPDATE products set title = '$this->title', image = '$this->image', description = '$this->description', price = '$this->price', createdBy = $this->createdBy WHERE id = $this->id LIMIT 1";
+      $query = "UPDATE products set title = '$this->title', image = '$this->image', description = '$this->description', category = $this->category, price = '$this->price', createdBy = $this->createdBy WHERE id = $this->id LIMIT 1";
   
       $result = self::$db->query($query);
       return [
