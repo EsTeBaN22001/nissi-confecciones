@@ -19,6 +19,7 @@ class ProductsController extends ActiveRecord{
 		
 		foreach($products as $product){
 			
+			// Cambiar el id del admin por el nombre y apellido
 			$idAdmin = $product->createdBy;
 			$result = Admin::find($idAdmin);
 			$product->createdBy = $result->name . " " . $result->surname;

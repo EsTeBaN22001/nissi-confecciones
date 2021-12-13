@@ -54,7 +54,7 @@ class GaleryController extends ActiveRecord{
 			// Setear la imagen
 			// Realiza un resize a la imagen con intervention
 			if($_FILES['image']['tmp_name']){
-				$img = Image::make($_FILES['image']['tmp_name'])->fit(800, 600);
+				$img = Image::make($_FILES['image']['tmp_name']);
 				$image->setImage($nameImage, GALERY_IMAGES_FORLDER);
 			}
 
@@ -116,7 +116,7 @@ class GaleryController extends ActiveRecord{
 			$nameImage = md5(uniqid(rand(), true)). ".jpg";
 			
 			if($_FILES['image']['tmp_name']){
-				$img = Image::make($_FILES['image']['tmp_name'])->fit(800, 600);
+				$img = Image::make($_FILES['image']['tmp_name']);
 				$image->setImage($nameImage, GALERY_IMAGES_FORLDER);
 			}
 

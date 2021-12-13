@@ -8,7 +8,6 @@ use Controllers\GaleryController;
 use Controllers\IndexController;
 use Controllers\LoginController;
 use Controllers\ProductsController;
-use Model\Category;
 use MVC\Router;
 
 $router = new Router();

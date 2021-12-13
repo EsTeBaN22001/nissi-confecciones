@@ -2,6 +2,7 @@
 
 namespace Controllers;
 
+use Model\Category;
 use Model\Galery;
 use Model\Product;
 use MVC\Router;
@@ -19,10 +20,22 @@ class IndexController{
 
   public static function products(Router $router){
 
+    // Obtiene todos los productos
     $products = Product::all();
+
+    // Obtiene todas las categorías
+    $categories = Category::all();
+
+    foreach($products as $product){
+      // Cambiar el id de la categoría por el nombre de la misma
+			$idCategory = $product->category;
+			$resultCategory = Category::find($idCategory);
+			$product->category = $resultCategory->category;
+    }
     
     $router->render('products/index', [
-      'products' => $products
+      'products' => $products,
+      'categories' => $categories
     ]);
 
   }

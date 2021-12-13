@@ -7,10 +7,16 @@
 </section>
 
 <div class="cards section container">
-  <h2 class="titleSeparator">productos</h2>
+  <h2 class="titleSeparator">Productos</h2>
 
   <div class="categories">
-    
+    <h3 style="font-size: 2.7rem;margin-bottom: .5rem;" >Categoría de productos</h3>
+    <div class="categories-container container">
+      <a href="#" category="all" class="category button-darkGray-inline-widthAuto">Todos</a>
+      <?php foreach($categories as $category): ?>
+        <a href="#" category="<?= $category->category; ?>" class="category button-darkGray-inline-widthAuto"><?= $category->category; ?></a>
+      <?php endforeach; ?>
+    </div>
   </div>
 
   <div class="cards-container">

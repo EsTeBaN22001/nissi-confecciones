@@ -23,10 +23,6 @@
           @include m.grid(2, 4rem);
         }
 
-        &:hover a{
-          filter: blur(.2rem);
-        }
-
         li{
     
           a{
