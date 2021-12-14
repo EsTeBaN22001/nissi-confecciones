@@ -51,6 +51,12 @@
           Volver al inicio
         </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout" role="button">
+          <i class="fas fa-sign-out-alt"></i>
+          Cerrar sesión
+        </a>
+      </li>
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -77,29 +83,31 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-users"></i>
-              <p>
-                Administradores
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="/admin/list-admins" class="nav-link">
-                  <i class="fas fa-list"></i>
-                  <p>Ver todos</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/admin/create-admin" class="nav-link">
-                  <i class="fas fa-plus-circle"></i>
-                  <p>Crear administrador</p>
-                </a>
-              </li>
-            </ul>
-          </li>
+          <?php if($_SESSION['level'] > 1): ?>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-users"></i>
+                <p>
+                  Administradores
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="/admin/list-admins" class="nav-link">
+                    <i class="fas fa-list"></i>
+                    <p>Ver todos</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/admin/create-admin" class="nav-link">
+                    <i class="fas fa-plus-circle"></i>
+                    <p>Crear administrador</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          <?php endif; ?>
           <li class="nav-item">
             <a href="#" class="nav-link">
             <i class="fas fa-box-open"></i>

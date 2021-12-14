@@ -4,7 +4,6 @@ namespace Controllers;
 
 use Model\Admin;
 use MVC\Router;
-use Model\ActiveRecord;
 
 class LoginController{
 
@@ -33,6 +32,8 @@ class LoginController{
             // Almacenar la información del usuario en la variable de session
             $user->authenticate();
 
+            header('Location: /admin');
+
           }
 
         }else{
@@ -49,6 +50,14 @@ class LoginController{
     ]);
 
   }
+
+  public static function logout(){
+    // session_start();
+    
+    $_SESSION = [];
+
+    header('Location: /');
+}
 
 }
 

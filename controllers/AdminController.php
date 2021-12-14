@@ -4,7 +4,6 @@ namespace Controllers;
 
 use Model\ActiveRecord;
 use Model\Admin;
-use Model\Product;
 use MVC\Router;
 
 class AdminController extends ActiveRecord{
@@ -47,8 +46,6 @@ class AdminController extends ActiveRecord{
           $result = $admin->crearAdmin();
 
           if($result){
-
-            $admin->authenticate();
             
             $admin::setAlerta('success', 'El administrador se creó correctamente');
             

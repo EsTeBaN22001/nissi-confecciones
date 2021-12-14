@@ -35,6 +35,9 @@ $router->post('/contact-us', [IndexController::class, 'contactUs']);
 $router->get('/login', [LoginController::class, 'login']);
 $router->post('/login', [LoginController::class, 'login']);
 
+// Logout para administradores
+$router->get('/logout', [LoginController::class, 'logout']);
+
 ////////////////////////////////////////////////////////////////////////////////
 //////////////////////Sección de administradores///////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
