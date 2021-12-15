@@ -53,10 +53,6 @@ class IndexController{
     ]);
   }
 
-  public static function contactUs(Router $router){
-    
-    $router->render('contact-us/index');
-  }
 }
 
 ?>

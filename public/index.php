@@ -4,6 +4,7 @@ require_once __DIR__ . '/../includes/app.php';
 
 use Controllers\AdminController;
 use Controllers\CategoryController;
+use Controllers\ContactUsController;
 use Controllers\GaleryController;
 use Controllers\IndexController;
 use Controllers\LoginController;
@@ -28,8 +29,8 @@ $router->get('/about-us', [IndexController::class, 'about']);
 $router->get('/galery', [IndexController::class, 'galery']);
 
 // Página contact-us
-$router->get('/contact-us', [IndexController::class, 'contactUs']);
-$router->post('/contact-us', [IndexController::class, 'contactUs']);
+$router->get('/contact-us', [ContactUsController::class, 'index']);
+$router->post('/contact-us', [ContactUsController::class, 'index']);
 
 // Login para administradores
 $router->get('/login', [LoginController::class, 'login']);

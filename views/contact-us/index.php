@@ -10,7 +10,9 @@
   <div class="contact-form-container container">
     <h1>Formulario de contacto</h1>
 
-    <form action="/contact-us" method="POST" class="form container">
+    <?php include_once(__DIR__ . './../templates/alerts.php'); ?>
+
+    <form method="POST" class="form container">
       <h2 class="titleSeparator">Ingrese los datos...</h2>
       <div class="fields-group container">
         <div class="form-group">
