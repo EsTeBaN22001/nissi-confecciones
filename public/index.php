@@ -117,6 +117,15 @@ $router->post('/admin/edit-image', [GaleryController::class, 'editImage']);
 $router->get('/admin/delete-image', [GaleryController::class, 'delImage']);
 $router->post('/admin/delete-image', [GaleryController::class, 'delImage']);
 
+//////////////////////////////////////
+////////Mensaje de contacto//////////
+////////////////////////////////////
+
+$router->get('/admin/list-messages', [ContactUsController::class, 'listMessages']);
+// Cambiar status del mensaje (Si se leyó o no)
+$router->get('/admin/list-messages/changeStatus', [ContactUsController::class, 'changeStatus']);
+$router->post('/admin/list-messages/changeStatus', [ContactUsController::class, 'changeStatus']);
+
 //////////////////////////////////////////////
 //////////////Comprobar rutas////////////////
 ////////////////////////////////////////////

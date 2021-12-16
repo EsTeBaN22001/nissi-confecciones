@@ -46,6 +46,28 @@ class ContactUsController extends ActiveRecord{
       'alerts' => $alerts
     ]);
   }
+
+  public static function listMessages(Router $router){
+
+    $messages = Contact::all();
+    
+    $router->renderAdmin('admin/contact-us/list-messages', [
+      'messages' => $messages
+    ]);
+
+  }
+
+  public static function changeStatus(){
+    
+    $contact = new Contact();
+    $idMessage = $_POST['id'];
+    $statusMessage = $_POST['status'];
+    $response = $contact->updateStatusMessage($idMessage, $statusMessage);
+
+
+    echo json_encode($response);
+  }
+
 }
 
 ?>

@@ -1,5 +1,5 @@
 // Código para listar los productos por categorías en la página de products
-if($('.categories')){
+if(document.querySelector('.categories')){
 
   // Agregando la clase de active a la primer categoría
   $('.categories-container .category[category="all"]').addClass('category-active');

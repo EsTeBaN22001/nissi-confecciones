@@ -21,7 +21,13 @@
 		<link rel="stylesheet" href="build/css/lightbox.css">
 	<?php endif; ?>
 </head>
-<body>
+
+<?php 
+	$file = basename($_SERVER['PHP_SELF']);
+	$page = str_replace('.php', '', $file);
+?>
+
+<body class="<?= $page; ?>">
 
 	<header class="header">
 		<a href="/" class="logo"><span>Carlos-</span>Guerra</a>
@@ -75,7 +81,7 @@
 			</div>
 			<div class="other-pages">
 				<h3 class="titleSeparator">Otras páginas</h3>
-				<ul>
+				<ul class="navFooter">
 					<li><a href="/">Inicio</a></li>
 					<li><a href="/products">Productos</a></li>
 					<li><a href="/about-us">Sobre nosotros</a></li>

@@ -32,6 +32,7 @@
     &:hover{
       background-color: rgba($color: v.$white, $alpha: .5);
       border-bottom: .3rem solid v.$white;
+      color: v.$white !important;
     }
 
   }

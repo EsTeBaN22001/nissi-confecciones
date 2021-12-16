@@ -5,13 +5,14 @@ namespace Model;
 class Contact extends ActiveRecord{
   // Base de datos
   protected static $tabla = 'contact';
-  protected static $columnsDB = ['id', 'name', 'email', 'affair', 'msg'];
+  protected static $columnsDB = ['id', 'name', 'email', 'affair', 'msg', 'status'];
 
   public $id;
   public $name;
   public $email;
   public $affair;
   public $msg;
+  public $status;
 
   public function __construct($args = []){
     $this->id = $args['id'] ?? null;
@@ -19,6 +20,7 @@ class Contact extends ActiveRecord{
     $this->email = $args['email'] ?? '';
     $this->affair = $args['affair'] ?? '';
     $this->msg = $args['msg'] ?? '';
+    $this->status = $args['status'] ?? 0;
   }
 
   // Validar nueva cuenta de administrador
@@ -51,6 +53,22 @@ class Contact extends ActiveRecord{
         'resultado' =>  $resultado,
         'id' => self::$db->insert_id
     ];  
+  }
+
+    // Edita y actualiza un registro de administrador
+  public function updateStatusMessage($id, $status){
+    $query = "UPDATE contact set status = '$status' WHERE id = $id LIMIT 1";
+
+    $response = self::$db->query($query);
+     if($response){
+      return [
+        'response' => 'success'
+      ];
+     }else{
+       return [
+         'response' => 'error'
+       ];
+     }
   }
   
 

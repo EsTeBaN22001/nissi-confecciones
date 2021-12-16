@@ -184,6 +184,23 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+            <i class="far fa-envelope"></i>
+              <p>
+                Mensajes de contacto
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/admin/list-messages" class="nav-link">
+                  <i class="fas fa-list"></i>
+                  <p>Ver mensajes</p>
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -217,12 +234,14 @@
 <!-- AdminLTE App -->
 <script src="/build/admin/js/adminlte.min.js"></script>
 <script src="/build/admin/js/demo.js"></script>
+<!-- PrincipalScript -->
+<script src="/build/js/app.js"></script>
 
 <?php 
 
 isset($_SERVER['PATH_INFO']) ? $pathInfo = $_SERVER['PATH_INFO'] : $pathInfo = '';
 
-if($pathInfo == '/admin/list-admins' || $pathInfo == '/admin/list-products' || $pathInfo == '/admin/list-images'): ?>
+if($pathInfo == '/admin/list-admins' || $pathInfo == '/admin/list-products' || $pathInfo == '/admin/list-images' || $pathInfo == '/admin/products/list-categories' || $pathInfo == '/admin/list-messages'): ?>
 
   <!-- DataTables  & Plugins -->
   <script src="/build/admin/plugins/datatables/jquery.dataTables.min.js"></script>
@@ -248,7 +267,7 @@ if($pathInfo == '/admin/list-admins' || $pathInfo == '/admin/list-products' || $
         "searching": true,
         "ordering": false,
         "info": true,
-        "autoWidth": false,
+        "autoWidth": true,
         "responsive": false,
         "scrollX": true,
         "columnDefs": [
