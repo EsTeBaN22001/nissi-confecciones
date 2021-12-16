@@ -24,7 +24,7 @@ class Router
         session_start();
 
         // Arreglo de rutas protegidas...
-        $protectedRoutes = ['/admin', '/admin/list-admins', '/admin/create-admin', '/admin/edit-admin', '/admin/delete-admin', '/admin/list-products', '/admin/create-product', '/admin/edit-product', '/admin/delete-product', '/admin/products/list-categories', '/admin/products/create-category', '/admin/products/edit-category', '/admin/products/delete-category', '/admin/list-images', '/admin/create-image', '/admin/edit-image', '/admin/delete-image'];
+        $protectedRoutes = ['/admin', '/admin/list-admins', '/admin/create-admin', '/admin/edit-admin', '/admin/delete-admin', '/admin/list-products', '/admin/create-product', '/admin/edit-product', '/admin/delete-product', '/admin/products/list-categories', '/admin/products/create-category', '/admin/products/edit-category', '/admin/products/delete-category', '/admin/list-images', '/admin/create-image', '/admin/edit-image', '/admin/delete-image', '/admin/list-messages', '/admin/list-messages/changeStatus'];
 
         $auth = $_SESSION['login'] ?? null;
 

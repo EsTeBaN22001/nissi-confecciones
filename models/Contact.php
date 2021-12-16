@@ -70,6 +70,20 @@ class Contact extends ActiveRecord{
        ];
      }
   }
+
+  public function deleteMessage($id){
+    $query = "DELETE FROM contact WHERE id = $id LIMIT 1";
+    $response = self::$db->query($query);
+    if($response){
+      return [
+        'response' => 'success'
+      ];
+    }else{
+      return [
+        'response' => 'error'
+      ];
+    }
+  }
   
 
 }

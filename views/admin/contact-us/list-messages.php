@@ -37,18 +37,15 @@
                   </thead>
                   <tbody class="listMessages">
                     <?php foreach($messages as $msg): ?>
-                      <tr id="<?= $msg->id; ?>">
+                      <tr class="messageRow" id="<?= $msg->id; ?>">
                         <td><?= $msg->id; ?></td>
                         <td><?= $msg->name; ?></td>
                         <td><?= $msg->email; ?></td>
                         <td><?= $msg->affair; ?></td>
                         <td><?= $msg->msg; ?></td>
-                        <td style="text-align:center;"><i class="fas fa-check-circle <?= $msg->status === '1' ? 'complet' : ''; ?>" style="font-size: 1.5rem;"></i></td>
+                        <td style="text-align:center;"><i class="fas fa-check-circle <?= $msg->status == '1' ? 'complet' : ''; ?>" style="font-size: 1.5rem;"></i></td>
                         <td>
-                          <form method="POST" class="w-100" action="/admin/delete-message">
-                            <input type="hidden" name="id" value="<?php echo $msg->id; ?>">
-                            <input type="submit" class="btn bg-red" value="Eliminar">
-                          </form>
+                          <button class="deleteMessage btn bg-red">Eliminar</button>
                         </td>
                       </tr>
                     <?php endforeach; ?>

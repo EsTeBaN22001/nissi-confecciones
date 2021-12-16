@@ -68,6 +68,15 @@ class ContactUsController extends ActiveRecord{
     echo json_encode($response);
   }
 
+  public static function deleteMessage(){
+
+    $contact = new Contact();
+    $id = $_POST['id'];
+    $response = $contact->deleteMessage($id);
+
+    echo json_encode($response);
+  }
+
 }
 
 ?>
