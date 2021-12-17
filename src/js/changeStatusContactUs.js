@@ -32,12 +32,14 @@ if(document.querySelector('.listMessages')){
     // Crear petición ajax
     const xhr = new XMLHttpRequest();
 
+    
     const data = new FormData();
     data.append('id', idMessage);
     data.append('status', status);
-
+    
     // Abrir la conexión ajax
-    xhr.open('POST', 'http://localhost:3000/admin/list-messages/changeStatus', true);
+    xhr.open('POST', 'http://nissi-confecciones.000webhostapp.com/admin/list-messages/changeStatus', true);
+    xhr.withCredentials = true;
 
     // Enviar la petición
     xhr.send(data);

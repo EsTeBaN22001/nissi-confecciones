@@ -17,12 +17,11 @@ if(document.querySelector('.listMessages')){
       data.append('id', idMessage);
   
       // Abrir la conexión ajax
-      xhr.open('POST', 'http://localhost:3000/admin/delete-message', true);
+      xhr.open('POST', 'https://nissi-confecciones.000webhostapp.com/admin/delete-message', true);
   
       xhr.onload = function(){
         if(this.status == '200'){
           const response = JSON.parse(xhr.responseText);
-          console.log(response.response)
           if(response.response == 'success'){
              window.location.href = '/admin/list-messages';
           }

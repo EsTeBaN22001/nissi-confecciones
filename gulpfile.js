@@ -27,7 +27,7 @@ function css() {
         .pipe(postcss([autoprefixer(), cssnano()]))
         // .pipe(postcss([autoprefixer()]))
         .pipe(sourcemaps.write('.'))
-        .pipe( dest('public/build/css') );
+        .pipe( dest('public_html/build/css') );
 }
 
 function javascript() {
@@ -35,20 +35,20 @@ function javascript() {
       .pipe(terser())
       .pipe(concat('app.js'))
       .pipe(sourcemaps.write('.'))
-      .pipe(dest('public/build/js'));
+      .pipe(dest('public_html/build/js'));
 }
 
 function imagenes() {
     return src(paths.imagenes)
         .pipe(cache(imagemin({ optimizationLevel: 3})))
-        .pipe(dest('public/build/img'))
+        .pipe(dest('public_html/build/img'))
         .pipe(notify({ message: 'Imagen Completada'}));
 }
 
 function versionWebp() {
     return src(paths.imagenes)
         .pipe( webp() )
-        .pipe(dest('public/build/img'))
+        .pipe(dest('public_html/build/img'))
         .pipe(notify({ message: 'Imagen Completada'}));
 }
 

@@ -1,7 +1,7 @@
 <section class="hero">
   <div class="hero-content container">
     <h3 class="welcome">Sobre nosotros</h3>
-    <h2><a href="/" class="logo"><span>Carlos-</span>Guerra</a></h2>
+    <h2><a href="/" class="logo"><span>Nissi</span> Confecciones</a></h2>
     <p>Conoce un poco más de quienes somos.</p>
   </div>
 </section>
@@ -17,7 +17,6 @@
         <li class="list-item">Realizar los trabajos en el menor tiempo posible</li>
         <li class="list-item">Hacer realidad las ideas de los clientes</li>
         <li class="list-item">Lograr precios accesibles para todas las personas</li>
-        <li class="list-item">Holaa no se que poner. XD</li>
       </ul>
 
     </div>
@@ -34,8 +33,7 @@
       <ul>
         <li><a href="#" class="whatsapp"><i class="fab fa-whatsapp-square"></i></a><p>WhatsApp</p></li>
         <li><a href="/contact-us" class="email"><i class="fas fa-envelope-square"></i></a><p>Email</p></li>
-        <li><a href="https://www.instagram.com/carlos.guespa/" target="__blank" class="instagram"><i class="fab fa-instagram-square"></i></a><p>Instagram</p></li>
-        <li><a href="https://www.facebook.com/carlosdavid.guerraespans.1" target="__blank" class="facebook"><i class="fab fa-facebook-square"></i></a>Facebook</li>
+        <li><a href="https://www.instagram.com/nissi.confecciones.cnc/" target="__blank" class="instagram"><i class="fab fa-instagram-square"></i></a><p>Instagram</p></li>
       </ul>
     </div>
   </div>

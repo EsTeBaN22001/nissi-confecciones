@@ -1,7 +1,7 @@
 <section class="hero">
   <div class="hero-content container">
     <h3 class="welcome">Productos</h3>
-    <h2><a href="/" class="logo"><span>Carlos-</span>Guerra</a></h2>
+    <h2><a href="/" class="logo"><span>Nissi</span> Confecciones</a></h2>
     <p>Conoce los trabajos que realizamos.</p>
   </div>
 </section>

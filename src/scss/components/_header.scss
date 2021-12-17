@@ -8,7 +8,7 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
-  align-items: flex-end;
+  align-items: center;
   padding: 3rem 2rem;
   z-index: 99;
   transition: all .7s ease;
@@ -18,17 +18,10 @@
     align-items: center;
   }
 
-
-  @include m.tablet{
-    flex-direction: row;
-    .logo{
-      font-size: 6rem;
-    }
-  }
-
-  @include m.breakpointPhone{
-    .logo{
-      font-size: 4rem;
+  .logo{
+    transition: all .3s ease;
+    .logoG{
+      fill: v.$white;
     }
   }
 
@@ -58,8 +51,9 @@
     }
 
     .logo{
-      color: v.$black;
-      text-align: center;
+      .logoG{
+        fill: v.$black;
+      }
     }
 
   }
@@ -74,4 +68,3 @@
     }
   }
 }
-
