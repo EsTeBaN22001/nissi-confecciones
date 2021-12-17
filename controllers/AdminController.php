@@ -4,12 +4,33 @@ namespace Controllers;
 
 use Model\ActiveRecord;
 use Model\Admin;
+use Model\Contact;
+use Model\Galery;
+use Model\Product;
 use MVC\Router;
 
 class AdminController extends ActiveRecord{
 
   public static function index(Router $router){
-    $router->renderAdmin('admin/index');
+
+    // Obtiene la cantidad de registros de la tabla de products
+    $countProducts = Product::count();
+
+    // Obtiene la cantidad de registros de la tabla de admins/users
+    $countAdmins = Admin::count();
+
+    // Obtiene la cantidad de registros de la tabla de galery
+    $countGalery = Galery::count();
+
+    // Obtiene la cantidad de registros de la tabla de contact
+    $countMessages = Contact::count();
+    
+    $router->renderAdmin('admin/index', [
+      'countAdmins' => $countAdmins,
+      'countProducts' => $countProducts,
+      'countGalery' => $countGalery,
+      'countMessages' => $countMessages
+    ]);
   }
 
   public static function listAdmins(Router $router){

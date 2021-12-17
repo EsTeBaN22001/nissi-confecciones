@@ -123,6 +123,18 @@ class ActiveRecord {
         return array_shift( $result ) ;
     }
 
+    // Obtener la cantidad de registros de una tabla
+    public static function count(){
+
+        $query = "SELECT * FROM " . static::$tabla;
+        
+        $result = self::$db->query($query);
+
+        $count = $result->num_rows;
+
+        return $count;
+    }
+
     // Obtener Registros con cierta cantidad
     public static function get($limite) {
         $query = "SELECT * FROM " . static::$tabla . " LIMIT ${limite}";

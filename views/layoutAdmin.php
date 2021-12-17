@@ -185,21 +185,10 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-            <i class="far fa-envelope"></i>
-              <p>
-                Mensajes de contacto
-                <i class="right fas fa-angle-left"></i>
-              </p>
+            <a href="/admin/list-messages" class="nav-link">
+              <i class="far fa-envelope"></i>
+              <p>Ver mensajes</p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="/admin/list-messages" class="nav-link">
-                  <i class="fas fa-list"></i>
-                  <p>Ver mensajes</p>
-                </a>
-              </li>
-            </ul>
           </li>
         </ul>
       </nav>
