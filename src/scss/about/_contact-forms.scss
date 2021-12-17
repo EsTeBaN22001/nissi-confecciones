@@ -14,13 +14,13 @@
       padding: 4rem 0;
 
       ul{
-        @include m.grid(4, 0rem);
+        @include m.grid(3, 0rem);
         padding: 0;
         transition: all .3s ease;
         text-align: center;
 
         @include m.tablet{
-          @include m.grid(2, 4rem);
+          @include m.grid(1, 4rem);
         }
 
         li{
@@ -69,11 +69,5 @@
     background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
     background-clip: text;
     color: transparent;
-  }
-}
-
-.facebook:hover{
-  i{ 
-    color: v.$facebook;
   }
 }

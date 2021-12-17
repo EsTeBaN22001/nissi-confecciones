@@ -1,7 +1,7 @@
 <section class="hero hero-home">
   <div class="hero-content container">
-    <h3 class="welcome">Bienvenido(a) a</h3>
-    <h1><a href="/" class="logo"><span>Carlos-</span>Guerra</a></h1>
+    <h3 class="welcome">Bienvenido@ a</h3>
+    <h2><a href="/" class="logo"><span>Nissi</span> Confecciones</a></h2>
     <p>En esta página te ofrecemos los mejores productos <br> grabados de madera o metal. Ofrecemos productos de alta calidad.</p>
   </div>
 </section>
@@ -34,23 +34,16 @@
     <div class="jobs-container section">
       <div class="job">
         <div class="img-container">
-          <img src="build/img/woodJob.webp" alt="Imagen de trabajos en madera">
-          <h3>Grabados en madera</h3>
-          <p>Este estilo consiste en hacer grabados sobre madera</p>
+          <img src="/build/img/dinosaurio desarmado.webp" alt="Grabados">
+          <h3>Grabados</h3>
+          <p>Realizamos grabados en distintos tipos de materiales (madera, acrílico, metales, etc.)</p>
         </div>
       </div>
       <div class="job">
         <div class="img-container">
           <img src="build/img/metalJob.webp" alt="Imagen de trabajos en metal">
-          <h3>Grabados en metal</h3>
-          <p>Este estilo consiste en hacer grabados sobre metal</p>
-        </div>
-      </div>
-      <div class="job">
-        <div class="img-container">
-          <img src="build/img/silverJob.webp" alt="Imagen de trabajos en plata">
-          <h3>Grabados en plata</h3>
-          <p>Este estilo consiste en hacer grabados sobre plata</p>
+          <h3>Cortes</h3>
+          <p>Realizamos cortes en distintos tipos de materiales (madera, acrílico, metales, etc.)</p>
         </div>
       </div>
     </div>

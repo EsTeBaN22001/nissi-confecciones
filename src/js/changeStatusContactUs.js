@@ -32,12 +32,15 @@ if(document.querySelector('.listMessages')){
     // Crear petición ajax
     const xhr = new XMLHttpRequest();
 
+    
     const data = new FormData();
     data.append('id', idMessage);
     data.append('status', status);
-
+    
     // Abrir la conexión ajax
     xhr.open('POST', 'http://localhost:3000/admin/list-messages/changeStatus', true);
+    xhr.withCredentials = true;
+    xhr.setRequestHeader('Content-Type', 'application/json');
 
     // Enviar la petición
     xhr.send(data);
