@@ -22,6 +22,9 @@ $router->get('/', [IndexController::class, 'index']);
 // Página products
 $router->get('/products', [IndexController::class, 'products']);
 
+// Página para ver producto
+$router->get('/view-product', [ProductsController::class, 'viewProduct']);
+
 // Página about
 $router->get('/about-us', [IndexController::class, 'about']);
 

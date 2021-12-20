@@ -174,6 +174,19 @@ class ProductsController extends ActiveRecord{
 
 	}
 
+	public static function viewProduct(Router $router){
+
+		$id = $_GET['id'];
+		$id = filter_var($id, FILTER_VALIDATE_INT);
+
+		$product = Product::find($id);
+		
+		$router->render('products/view-product', [
+			'product' => $product
+		]);
+
+	}
+
 }
 
 ?>

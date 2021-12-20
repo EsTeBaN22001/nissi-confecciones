@@ -38,14 +38,8 @@ if(document.querySelector('.listMessages')){
     data.append('status', status);
     
     // Abrir la conexión ajax
-<<<<<<< HEAD
     xhr.open('POST', 'http://nissi-confecciones.000webhostapp.com/admin/list-messages/changeStatus', true);
     xhr.withCredentials = true;
-=======
-    xhr.open('POST', 'http://localhost:3000/admin/list-messages/changeStatus', true);
-    xhr.withCredentials = true;
-    xhr.setRequestHeader('Content-Type', 'application/json');
->>>>>>> a5a1c9361b7b1ab654b729698608807190c612ea
 
     // Enviar la petición
     xhr.send(data);

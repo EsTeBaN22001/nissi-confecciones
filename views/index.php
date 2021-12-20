@@ -54,6 +54,7 @@
 
   <div class="cards-container">
     <?php include_once('templates/products.php'); ?>
+    <a href="/products" class="button-darkGray-inline-widthAuto" style="width: 30rem;">Ver todas las publicaciones</a>
   </div>
 
 </div>

@@ -10,7 +10,15 @@
     @include m.grid(2, 20rem);
 
     @include m.tablet{
-      @include m.grid(1, 4rem);
+      padding: 0rem;
+      @include m.grid(1, 0rem);
+      row-gap: 4rem;
+    }
+
+    @include m.phone{
+      &.container{
+        width: 95%;
+      }
     }
 
     h3{
@@ -33,16 +41,30 @@
           align-items: center;
           color: v.$white;
           transition: all .3s ease;
+
+          @include m.breakpointSmartWatch{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
           
           p{
             font-size: 1.7rem;
             margin: .7rem;
+
+            @include m.breakpointSmartWatch{
+              font-size: 1.3rem;
+            }
           }
   
           i{
             margin-right: 1rem;
             font-size: 2.4rem;
             transition: all .3s ease;
+
+            @include m.phone{
+              margin-right: .2rem;
+            }
           }
 
           &:hover{

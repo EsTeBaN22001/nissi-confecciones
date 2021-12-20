@@ -1,0 +1,46 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.product-container{
+  @include m.grid(2, 3rem);
+
+  .product-description-container{
+    h1{
+      text-transform: uppercase;
+      font-weight: v.$bold;
+      text-align: start;
+
+      &.titleSeparator{
+        &::after {
+          margin: 1rem 0;
+        }
+      }
+    }
+
+    .product-description{
+      font-size: 2rem;
+      margin: .5rem 0;
+    }
+
+    .product-price{
+      font-size: 3rem;
+      color: v.$orange;
+      font-weight: v.$bold;
+      margin: 1rem 0;
+    }
+
+    h3{
+      text-align: start;
+      margin-top: 3rem;
+      font-weight: v.$bold;
+    }
+
+  }
+  
+  .product-image{
+    img{
+      border-radius: .7rem;
+    }
+  }
+  
+}
