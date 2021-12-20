@@ -18,9 +18,20 @@
     align-items: center;
   }
 
+  @include m.tablet{
+    flex-direction: row;
+    align-items: center;
+  }
+
   .logo{
-    transition: all .3s ease;
+    @include m.tablet{
+      width: 12rem;
+    }
+    @include m.breakpointSmartWatch{
+      width: 10rem;
+    }
     .logoG{
+      transition: all .3s ease;
       fill: v.$white;
     }
   }
