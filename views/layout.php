@@ -128,7 +128,7 @@
 			</div>
 		</div>
 		<div class="copyright">
-			<p>&copy; Todos los derechos reservados por Nissi-confecciones 2021</p>
+			<p>&copy; Todos los derechos reservados por Nissi-confecciones 2022</p>
 		</div>
 	</footer>
 

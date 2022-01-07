@@ -9,19 +9,20 @@
 <section class="about about-page section">
   <div class="about-container container">
     <div class="about-info">
-      <h1 class="titleSeparator">Acerca de nosotros</h1>
-      <p>Nosotros lo que buscamos es hacer los productos de mayor calidad y al mejor precio. Contamos con una máquina de gran calidad para lograr hacer los mejores grabados con mayor calidad y en distintos materiales.</p>
+      <h2 class="titleSeparator">Acerca de nosotros</h2>
+      <p>Buscamos hacer productos de mayor cálidad al mejor precio posible. Contamos con grabados en distintos materiales (madera, acero inoxidable, etc...). las dimensiones máximas por pieza que podemos realizar son de 35x45x4.
+      los precios del producto hecho a pedido puede variar dependiendo de las dimenciones, material y complejidad del mismo.</p>
       <h3>Nuestros objetivos</h3>
       <ul class="about-list">
-        <li class="list-item">Realizar trabajos de alta calidad</li>
-        <li class="list-item">Realizar los trabajos en el menor tiempo posible</li>
+        <li class="list-item">Ofrecemos trabajos de alta calidad</li>
+        <li class="list-item">Trabajos en el menor tiempo posible</li>
         <li class="list-item">Hacer realidad las ideas de los clientes</li>
-        <li class="list-item">Lograr precios accesibles para todas las personas</li>
+        <li class="list-item">Lograr precios accesibles para los clientes</li>
       </ul>
 
     </div>
     <div class="about-image">
-      <img src="build/img/about-us-image.webp" alt="Imagen acerca de nosotros">
+      <img src="build/img/about.webp" alt="Imagen acerca de nosotros">
     </div>
   </div>
 </section>

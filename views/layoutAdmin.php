@@ -207,8 +207,8 @@
 
   <!-- Main Footer -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2021 <a href="/">CarlosGuerraWeb</a>.</strong>
-    All rights reserved.
+    <strong>Copyright &copy; 2022 <a href="/">NissiConfecciones</a>.</strong>
+    Todos los derechos reservados.
   </footer>
 </div>
 <!-- ./wrapper -->
