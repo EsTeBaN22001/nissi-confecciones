@@ -1,7 +1,7 @@
 <?php foreach($products as $product): ?>
   <div class="card" category="<?= $product->category; ?>">
     <div class="card__image-holder">
-      <img class="card__image" src="/productsImages/<?= $product->image; ?>" alt="wave" />
+      <img class="card__image" src="/productsImages/<?= $product->image; ?>" alt="<?= $product->title; ?>" loading="lazy" />
     </div>
     <div class="card-title">
       <h2 class="titleSeparator">

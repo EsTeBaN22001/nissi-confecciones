@@ -1,8 +1,37 @@
-<section class="hero hero-home">
-  <div class="hero-content container">
-    <h3 class="welcome">Bienvenido@ a</h3>
-    <h2><a href="/" class="logo"><span>Nissi</span> Confecciones</a></h2>
-    <p>En esta página te ofrecemos los mejores productos <br> grabados de madera o metal. Ofrecemos productos de alta calidad.</p>
+<section class="glide">
+  <div class="glide__track" data-glide-el="track">
+    <ul class="glide__slides">
+      <li class="glide__slide img1">
+        <div class="slide__content">
+          <h3 class="welcome">Bienvenido@ a</h3>
+          <h2><a href="/" class="logo"><span>Nissi</span> Confecciones</a></h2>
+          <p>En esta página te ofrecemos los mejores productos <br> grabados de madera o metal. Ofrecemos productos de alta calidad.</p>
+        </div>
+      </li>
+      <li class="glide__slide img2">
+        <div class="slide__content">
+          <h3 class="welcome">Bienvenido@ a</h3>
+          <h2><a href="/" class="logo"><span>Nissi</span> Confecciones</a></h2>
+          <p>En esta página te ofrecemos los mejores productos <br> grabados de madera o metal. Ofrecemos productos de alta calidad.</p>
+        </div>
+      </li>
+      <li class="glide__slide img3">
+        <div class="slide__content">
+          <h3 class="welcome">Bienvenido@ a</h3>
+          <h2><a href="/" class="logo"><span>Nissi</span> Confecciones</a></h2>
+          <p>En esta página te ofrecemos los mejores productos <br> grabados de madera o metal. Ofrecemos productos de alta calidad.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="glide__arrows" data-glide-el="controls">
+    <button class="glide__arrow glide__arrow--left" data-glide-dir="<"> < </button>
+    <button class="glide__arrow glide__arrow--right" data-glide-dir=">"> > </button>
+  </div>
+  <div class="glide__bullets" data-glide-el="controls[nav]">
+    <button class="glide__bullet" data-glide-dir="=0"></button>
+    <button class="glide__bullet" data-glide-dir="=1"></button>
+    <button class="glide__bullet" data-glide-dir="=2"></button>
   </div>
 </section>
 
@@ -19,7 +48,6 @@
         <li class="list-item">Hacer realidad las ideas de los clientes</li>
         <li class="list-item">Lograr precios accesibles para los clientes</li>
       </ul>
-
     </div>
     <div class="about-image">
       <img src="build/img/about.webp" alt="Imagen acerca de nosotros">
@@ -50,10 +78,8 @@
 
 <div class="cards section container">
   <h2 class="titleSeparator">Últimos productos</h2>
-
   <div class="cards-container">
     <?php include_once('templates/products.php'); ?>
     <a href="/products" class="button-darkGray-inline-widthAuto" style="width: 30rem;">Ver todas las publicaciones</a>
   </div>
-
 </div>

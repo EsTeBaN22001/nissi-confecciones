@@ -1,6 +1,6 @@
 <?php
 
-$db = mysqli_connect('localhost', 'root', '', 'carlosGuerraWeb');
+$db = mysqli_connect('localhost', 'root', '', 'nissi-confeccciones');
 $db->set_charset('UTF-8');
 
 

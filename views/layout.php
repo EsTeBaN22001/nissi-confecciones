@@ -134,6 +134,8 @@
 
 	<!-- Font Awesome -->
 	<script src="build/js/fontawesome.min.js"></script>
+	<!-- Glide.js -->
+	<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 	
 	<?php if( $pathInfo == "/galery"): ?>
 		<!-- LightBox -->

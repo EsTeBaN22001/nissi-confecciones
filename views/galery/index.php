@@ -15,7 +15,7 @@
       <?php foreach($images as $image): ?>
         <?php $i == 3 || $i == 5 || $i = 7 || $i == 9 ? $span = 'spanY2' : $span = ''; ?>
         <a class="<?= $span; ?>" href="/galeryImages/<?= $image->image; ?>" data-lightbox="roadtrip" data-title="<?= $image->title; ?>">
-          <img src="/galeryImages/<?= $image->image; ?>" alt="" srcset="">
+          <img src="/galeryImages/<?= $image->image; ?>" alt="<?= $image->title; ?>" loading="lazy">
         </a>
       <?php $i++; endforeach; ?>
     </div>

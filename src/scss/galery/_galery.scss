@@ -31,36 +31,6 @@
       -webkit-box-shadow: 0px 0px 24px -5px rgba(0,0,0,0.75);
       -moz-box-shadow: 0px 0px 24px -5px rgba(0,0,0,0.75);
       box-shadow: 0px 0px 24px -5px rgba(0,0,0,0.75);
-
-      img{
-        filter: none;
-        -webkit-filter: none;
-      }
-    }
-  }
-
-  .spanX2{
-    grid-column: span 2;
-  }
-  .spanY2{
-    grid-row: span 2;
-  }
-
-  .spanXY2{
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-
-  @include m.phone{
-    .spanX2{
-      grid-column: span 1;
-    }
-    .spanY2{
-      grid-row: span 1;
-    }
-    .spanXY2{
-      grid-column: span 1;
-      grid-row: span 1;
     }
   }
 
@@ -68,8 +38,6 @@
     object-fit: cover;
     height: 24rem;
     width: 100%;
-    filter: gray;
-    -webkit-filter: grayscale(1);
     transition: all .2s ease-in-out;
   }
 }
